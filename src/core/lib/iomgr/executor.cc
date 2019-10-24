@@ -50,6 +50,9 @@
     }                                              \
   } while (0)
 
+// custom flag set by oboe
+extern bool oboe_grpc_forked;
+
 namespace grpc_core {
 namespace {
 
@@ -207,8 +210,11 @@ void Executor::SetThreading(bool threading) {
 
     gpr_atm_rel_store(&num_threads_, 0);
     for (size_t i = 0; i < max_threads_; i++) {
-      gpr_mu_destroy(&thd_state_[i].mu);
-      gpr_cv_destroy(&thd_state_[i].cv);
+      // custom oboe patch: don't attempt to destroy resources in a forked process
+      if (!oboe_grpc_forked) {
+        gpr_mu_destroy(&thd_state_[i].mu);
+        gpr_cv_destroy(&thd_state_[i].cv);
+      }
       RunClosures(thd_state_[i].name, thd_state_[i].elems);
     }
 
