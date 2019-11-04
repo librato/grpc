@@ -36,6 +36,9 @@
 #include "src/core/lib/slice/b64.h"
 #include "src/core/lib/uri/uri_parser.h"
 
+// custom proxy set by oboe
+extern char *oboe_grpc_proxy;
+
 /**
  * Parses the 'https_proxy' env var (fallback on 'http_proxy') and returns the
  * proxy hostname to resolve or nullptr on error. Also sets 'user_cred' to user
@@ -51,7 +54,8 @@ static char* get_http_proxy_server(char** user_cred) {
    * Also prefer using 'https_proxy' with fallback on 'http_proxy'. The
    * fallback behavior can be removed if there's a demand for it.
    */
-  char* uri_str = gpr_getenv("grpc_proxy");
+  char* uri_str = oboe_grpc_proxy ? gpr_strdup(oboe_grpc_proxy): nullptr;
+  if (uri_str == nullptr) uri_str = gpr_getenv("grpc_proxy");
   if (uri_str == nullptr) uri_str = gpr_getenv("https_proxy");
   if (uri_str == nullptr) uri_str = gpr_getenv("http_proxy");
   if (uri_str == nullptr) return nullptr;
