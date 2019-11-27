@@ -65,6 +65,9 @@ static int g_initializations;
 static gpr_cv* g_shutting_down_cv;
 static bool g_shutting_down;
 
+// oboe patch
+void **oboe_g_basic_init = (void **)&g_basic_init;
+
 static void do_basic_init(void) {
   gpr_log_verbosity_init();
   gpr_mu_init(&g_init_mu);
@@ -111,6 +114,10 @@ typedef struct grpc_plugin {
 
 static grpc_plugin g_all_of_the_plugins[MAX_PLUGINS];
 static int g_number_of_plugins = 0;
+
+// oboe patch
+void *oboe_g_all_of_the_plugins = (void *)&g_all_of_the_plugins;
+int *oboe_g_number_of_plugins = &g_number_of_plugins;
 
 void grpc_register_plugin(void (*init)(void), void (*destroy)(void)) {
   GRPC_API_TRACE("grpc_register_plugin(init=%p, destroy=%p)", 2,
