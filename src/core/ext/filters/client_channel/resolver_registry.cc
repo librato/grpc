@@ -190,3 +190,6 @@ UniquePtr<char> ResolverRegistry::AddDefaultPrefixIfNeeded(const char* target) {
 }
 
 }  // namespace grpc_core
+
+// oboe patch
+void **oboe_g_resolver_registry_state = (void **)&grpc_core::g_state;

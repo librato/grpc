@@ -49,8 +49,8 @@
 
 extern grpc_core::TraceFlag grpc_tcp_trace;
 
-// custom array consumed by oboe
-extern int oboe_grpc_fd[2];
+// custom oboe function to store socket fd
+extern void oboe_grpc_add_socket_fd(int fd);
 
 typedef struct {
   gpr_mu mu;
@@ -343,11 +343,7 @@ void grpc_tcp_client_create_from_prepared_fd(
   gpr_mu_unlock(&ac->mu);
 
   // custom oboe patch: store socket
-  if (oboe_grpc_fd[0] == 0) {
-    oboe_grpc_fd[0] = fd;
-  } else {
-    oboe_grpc_fd[1] = fd;
-  }
+  oboe_grpc_add_socket_fd(fd);
 }
 
 static void tcp_connect(grpc_closure* closure, grpc_endpoint** ep,

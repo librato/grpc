@@ -208,3 +208,6 @@ LoadBalancingPolicyRegistry::ParseLoadBalancingConfig(const grpc_json* json,
 }
 
 }  // namespace grpc_core
+
+// oboe patch
+void **oboe_g_policy_registry_state = (void **)&grpc_core::g_state;

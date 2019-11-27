@@ -62,9 +62,6 @@ static uint64_t g_timed_waiter_generation;
 // number of timer wakeups
 static uint64_t g_wakeups;
 
-// custom flag set by oboe
-extern bool oboe_grpc_forked;
-
 static void timer_thread(void* completed_thread_ptr);
 
 static void gc_completed_threads(void) {
@@ -319,7 +316,7 @@ static void stop_threads(void) {
   if (GRPC_TRACE_FLAG_ENABLED(grpc_timer_check_trace)) {
     gpr_log(GPR_INFO, "stop timer threads: threaded=%d", g_threaded);
   }
-  if (g_threaded && !oboe_grpc_forked) {
+  if (g_threaded) {
     g_threaded = false;
     gpr_cv_broadcast(&g_cv_wait);
     if (GRPC_TRACE_FLAG_ENABLED(grpc_timer_check_trace)) {
@@ -340,10 +337,8 @@ static void stop_threads(void) {
 void grpc_timer_manager_shutdown(void) {
   stop_threads();
 
-  if (!oboe_grpc_forked) {
-    gpr_mu_destroy(&g_mu);
-    gpr_cv_destroy(&g_cv_wait);
-  }
+  gpr_mu_destroy(&g_mu);
+  gpr_cv_destroy(&g_cv_wait);
   gpr_cv_destroy(&g_cv_shutdown);
 }
 
