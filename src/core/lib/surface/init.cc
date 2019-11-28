@@ -66,7 +66,7 @@ static gpr_cv* g_shutting_down_cv;
 static bool g_shutting_down;
 
 // oboe patch
-void **oboe_g_basic_init = (void **)&g_basic_init;
+pthread_once_t *oboe_g_basic_init = &g_basic_init;
 
 static void do_basic_init(void) {
   gpr_log_verbosity_init();
