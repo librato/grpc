@@ -88,6 +88,10 @@ typedef struct epoll_set {
 /* The global singleton epoll set */
 static epoll_set g_epoll_set;
 
+// oboe patch
+void *oboe_g_epoll_set = (void *)&g_epoll_set;
+int oboe_g_epoll_set_size = sizeof(epoll_set);
+
 static int epoll_create_and_cloexec() {
 #ifdef GRPC_LINUX_EPOLL_CREATE1
   int fd = epoll_create1(EPOLL_CLOEXEC);
