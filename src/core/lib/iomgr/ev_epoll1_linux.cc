@@ -88,10 +88,6 @@ typedef struct epoll_set {
 /* The global singleton epoll set */
 static epoll_set g_epoll_set;
 
-// oboe patch
-void *oboe_g_epoll_set = (void *)&g_epoll_set;
-int oboe_g_epoll_set_size = sizeof(epoll_set);
-
 static int epoll_create_and_cloexec() {
 #ifdef GRPC_LINUX_EPOLL_CREATE1
   int fd = epoll_create1(EPOLL_CLOEXEC);
@@ -1323,8 +1319,11 @@ static void reset_event_manager_on_fork() {
   }
   gpr_mu_unlock(&fork_fd_list_mu);
   shutdown_engine();
-  grpc_init_epoll1_linux(true);
+  //grpc_init_epoll1_linux(true);
 }
+
+// oboe patch
+void (*oboe_reset_event_manager_on_fork)() = &reset_event_manager_on_fork;
 
 /* It is possible that GLIBC has epoll but the underlying kernel doesn't.
  * Create epoll_fd (epoll_set_init() takes care of that) to make sure epoll
