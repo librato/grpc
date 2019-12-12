@@ -50,8 +50,8 @@ static grpc_core::Map<grpc_core::UniquePtr<char>,
                       grpc_core::StringLess>* g_grpc_control_plane_creds;
 static gpr_mu g_control_plane_creds_mu;
 
-// oboe patch
-void **oboe_g_grpc_control_plane_creds = (void **)&g_grpc_control_plane_creds;
+// patch to allow forking
+void **fork_g_grpc_control_plane_creds = (void **)&g_grpc_control_plane_creds;
 
 static void do_control_plane_creds_init() {
   gpr_mu_init(&g_control_plane_creds_mu);

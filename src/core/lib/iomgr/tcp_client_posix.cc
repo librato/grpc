@@ -49,8 +49,8 @@
 
 extern grpc_core::TraceFlag grpc_tcp_trace;
 
-// custom oboe function to store socket fd
-extern void oboe_grpc_add_socket_fd(int fd);
+// patch to allow forking
+extern void grpc_add_socket_fd(int fd);
 
 typedef struct {
   gpr_mu mu;
@@ -342,8 +342,8 @@ void grpc_tcp_client_create_from_prepared_fd(
   grpc_fd_notify_on_write(ac->fd, &ac->write_closure);
   gpr_mu_unlock(&ac->mu);
 
-  // custom oboe patch: store socket
-  oboe_grpc_add_socket_fd(fd);
+  // patch to allow forking
+  grpc_add_socket_fd(fd);
 }
 
 static void tcp_connect(grpc_closure* closure, grpc_endpoint** ep,

@@ -58,8 +58,8 @@ static backup_poller* g_poller = nullptr;  // guarded by g_poller_mu
 // treated as const.
 static int g_poll_interval_ms = DEFAULT_POLL_INTERVAL_MS;
 
-// oboe patch
-void **oboe_g_poller = (void **)&g_poller;
+// patch to allow forking
+void **fork_g_poller = (void **)&g_poller;
 
 GPR_GLOBAL_CONFIG_DEFINE_INT32(
     grpc_client_channel_backup_poll_interval_ms, DEFAULT_POLL_INTERVAL_MS,
