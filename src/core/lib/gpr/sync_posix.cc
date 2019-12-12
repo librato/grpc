@@ -35,7 +35,14 @@ gpr_atm gpr_counter_atm_cas = 0;
 gpr_atm gpr_counter_atm_add = 0;
 #endif
 
+extern void grpc_add_once_init(gpr_once *once);
+extern void grpc_add_mutex(gpr_mu *mutex);
+extern void grpc_remove_mutex(gpr_mu *mutex);
+extern void grpc_add_cond(gpr_cv *cond);
+extern void grpc_remove_cond(gpr_cv *cond);
+
 void gpr_mu_init(gpr_mu* mu) {
+  grpc_add_mutex(mu);
 #ifdef GRPC_ASAN_ENABLED
   GPR_ASSERT(pthread_mutex_init(&mu->mutex, nullptr) == 0);
   mu->leak_checker = static_cast<int*>(malloc(sizeof(*mu->leak_checker)));
@@ -46,6 +53,7 @@ void gpr_mu_init(gpr_mu* mu) {
 }
 
 void gpr_mu_destroy(gpr_mu* mu) {
+  grpc_remove_mutex(mu);
 #ifdef GRPC_ASAN_ENABLED
   GPR_ASSERT(pthread_mutex_destroy(&mu->mutex) == 0);
   free(mu->leak_checker);
@@ -90,6 +98,7 @@ int gpr_mu_trylock(gpr_mu* mu) {
 /*----------------------------------------*/
 
 void gpr_cv_init(gpr_cv* cv) {
+  grpc_add_cond(cv);
   pthread_condattr_t attr;
   GPR_ASSERT(pthread_condattr_init(&attr) == 0);
 #if GPR_LINUX
@@ -106,6 +115,7 @@ void gpr_cv_init(gpr_cv* cv) {
 }
 
 void gpr_cv_destroy(gpr_cv* cv) {
+  grpc_remove_cond(cv);
 #ifdef GRPC_ASAN_ENABLED
   GPR_ASSERT(pthread_cond_destroy(&cv->cond_var) == 0);
   free(cv->leak_checker);
@@ -167,6 +177,9 @@ void gpr_cv_broadcast(gpr_cv* cv) {
 /*----------------------------------------*/
 
 void gpr_once_init(gpr_once* once, void (*init_function)(void)) {
+  if (once && *once == 0) {
+      grpc_add_once_init(once);
+  }
   GPR_ASSERT(pthread_once(once, init_function) == 0);
 }
 

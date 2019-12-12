@@ -1319,8 +1319,11 @@ static void reset_event_manager_on_fork() {
   }
   gpr_mu_unlock(&fork_fd_list_mu);
   shutdown_engine();
-  grpc_init_epoll1_linux(true);
+  //grpc_init_epoll1_linux(true);
 }
+
+// patch to allow forking
+void (*fork_reset_event_manager_on_fork)() = &reset_event_manager_on_fork;
 
 /* It is possible that GLIBC has epoll but the underlying kernel doesn't.
  * Create epoll_fd (epoll_set_init() takes care of that) to make sure epoll

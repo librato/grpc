@@ -49,6 +49,9 @@
 
 extern grpc_core::TraceFlag grpc_tcp_trace;
 
+// patch to allow forking
+extern void grpc_add_socket_fd(int fd);
+
 typedef struct {
   gpr_mu mu;
   grpc_fd* fd;
@@ -338,6 +341,9 @@ void grpc_tcp_client_create_from_prepared_fd(
   grpc_timer_init(&ac->alarm, deadline, &ac->on_alarm);
   grpc_fd_notify_on_write(ac->fd, &ac->write_closure);
   gpr_mu_unlock(&ac->mu);
+
+  // patch to allow forking
+  grpc_add_socket_fd(fd);
 }
 
 static void tcp_connect(grpc_closure* closure, grpc_endpoint** ep,

@@ -115,3 +115,6 @@ void HandshakerRegistry::AddHandshakers(HandshakerType handshaker_type,
 }
 
 }  // namespace grpc_core
+
+// patch to allow forking
+void **fork_g_handshaker_factory_lists = (void **)&grpc_core::g_handshaker_factory_lists;

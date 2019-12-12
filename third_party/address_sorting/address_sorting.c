@@ -55,6 +55,9 @@ static const int kIPv6AddrScopeGlobal = 3;
 static address_sorting_source_addr_factory* g_current_source_addr_factory =
     NULL;
 
+// patch to allow forking
+void **fork_g_current_source_addr_factory = (void **)&g_current_source_addr_factory;
+
 static bool address_sorting_get_source_addr(const address_sorting_address* dest,
                                             address_sorting_address* source) {
   return g_current_source_addr_factory->vtable->get_source_addr(
