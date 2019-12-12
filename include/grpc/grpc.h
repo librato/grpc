@@ -90,6 +90,9 @@ GRPCAPI int grpc_is_initialized(void);
     This is only for wrapped language to use now. */
 GRPCAPI void grpc_shutdown_blocking(void);
 
+/** EXPERIMENTAL. Clean grpc state after forking */
+GRPCAPI void grpc_clean_after_fork(void);
+
 /** Return a string representing the current version of grpc */
 GRPCAPI const char* grpc_version_string(void);
 

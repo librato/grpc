@@ -78,8 +78,8 @@ grpc_wakeup_fd grpc_global_wakeup_fd;
 static const grpc_event_engine_vtable* g_event_engine = nullptr;
 static const char* g_poll_strategy_name = nullptr;
 
-// oboe patch
-void **oboe_g_event_engine = (void **)&g_event_engine;
+// patch to allow forking
+void **fork_g_event_engine = (void **)&g_event_engine;
 
 typedef const grpc_event_engine_vtable* (*event_engine_factory_fn)(
     bool explicit_request);

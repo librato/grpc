@@ -328,5 +328,5 @@ void ServiceConfig::Shutdown() {
 
 }  // namespace grpc_core
 
-// oboe patch
-void **oboe_g_registered_parsers = (void **)&grpc_core::g_registered_parsers;
+// patch to allow forking
+void **fork_g_registered_parsers = (void **)&grpc_core::g_registered_parsers;

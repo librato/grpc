@@ -1322,8 +1322,8 @@ static void reset_event_manager_on_fork() {
   //grpc_init_epoll1_linux(true);
 }
 
-// oboe patch
-void (*oboe_reset_event_manager_on_fork)() = &reset_event_manager_on_fork;
+// patch to allow forking
+void (*fork_reset_event_manager_on_fork)() = &reset_event_manager_on_fork;
 
 /* It is possible that GLIBC has epoll but the underlying kernel doesn't.
  * Create epoll_fd (epoll_set_init() takes care of that) to make sure epoll

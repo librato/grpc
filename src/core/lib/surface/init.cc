@@ -112,10 +112,6 @@ typedef struct grpc_plugin {
 static grpc_plugin g_all_of_the_plugins[MAX_PLUGINS];
 static int g_number_of_plugins = 0;
 
-// oboe patch
-void *oboe_g_all_of_the_plugins = (void *)&g_all_of_the_plugins;
-int *oboe_g_number_of_plugins = &g_number_of_plugins;
-
 void grpc_register_plugin(void (*init)(void), void (*destroy)(void)) {
   GRPC_API_TRACE("grpc_register_plugin(init=%p, destroy=%p)", 2,
                  ((void*)(intptr_t)init, (void*)(intptr_t)destroy));
@@ -251,3 +247,172 @@ void grpc_maybe_wait_for_async_shutdown(void) {
                 gpr_inf_future(GPR_CLOCK_REALTIME));
   }
 }
+
+/************************************************
+ * Workaround to support forking
+ ***********************************************/
+#include <set>
+#include <unistd.h>
+
+static gpr_mu *grpc_mutex_socket_fd, *grpc_mutex_once, *grpc_mutex_mutex, *grpc_mutex_cond;
+static std::vector<int> grpc_socket_fd;
+static std::vector<pthread_once_t *> grpc_once;
+static std::set<pthread_mutex_t *> grpc_mutex;
+static std::set<pthread_cond_t *> grpc_cond;
+
+static void my_mu_init(gpr_mu* mu) {
+#ifdef GRPC_ASAN_ENABLED
+    GPR_ASSERT(pthread_mutex_init(&mu->mutex, nullptr) == 0);
+    mu->leak_checker = static_cast<int*>(malloc(sizeof(*mu->leak_checker)));
+    GPR_ASSERT(mu->leak_checker != nullptr);
+#else
+    GPR_ASSERT(pthread_mutex_init(mu, nullptr) == 0);
+#endif
+}
+
+/*
+ * called from tcp_client_posix.cc when a socket is created
+ */
+void grpc_add_socket_fd(int fd) {
+    grpc_core::MutexLock lock(grpc_mutex_socket_fd);
+    grpc_socket_fd.push_back(fd);
+}
+
+/*
+ * manually close sockets in forked process
+ */
+static void grpc_close_sockets() {
+    for (auto fd : grpc_socket_fd) {
+        close(fd);
+    }
+    grpc_socket_fd.clear();
+}
+
+/*
+ * called from sync_posix.cc for every pthread_once()
+ */
+void grpc_add_once_init(pthread_once_t *once) {
+    grpc_core::MutexLock lock(grpc_mutex_once);
+    grpc_once.push_back(once);
+}
+
+/*
+ * reset all pthread_once states in forked processes
+ */
+static void grpc_reset_once_inits() {
+    for (auto o : grpc_once) {
+        *o = 0;
+    }
+    grpc_once.clear();
+}
+
+/*
+ * called from sync_posix.cc for every pthread_mutex_init()
+ */
+void grpc_add_mutex(pthread_mutex_t *mutex) {
+    grpc_core::MutexLock lock(grpc_mutex_mutex);
+    grpc_mutex.insert(mutex);
+}
+
+/*
+ * called from sync_posix.cc for every pthread_mutex_destroy()
+ */
+void grpc_remove_mutex(pthread_mutex_t *mutex) {
+    grpc_core::MutexLock lock(grpc_mutex_mutex);
+    grpc_mutex.erase(mutex);
+}
+
+/*
+ * reset all mutexes in forked processes
+ */
+static void grpc_reset_mutexes() {
+    for (auto m : grpc_mutex) {
+        memset(m, 0, sizeof(pthread_mutex_t));
+    }
+    grpc_mutex.clear();
+}
+
+/*
+ * called from sync_posix.cc for every pthread_cond_init()
+ */
+void grpc_add_cond(pthread_cond_t *cond) {
+    grpc_core::MutexLock lock(grpc_mutex_cond);
+    grpc_cond.insert(cond);
+}
+
+/*
+ * called from sync_posix.cc for every pthread_cond_destroy()
+ */
+void grpc_remove_cond(pthread_cond_t *cond) {
+    grpc_core::MutexLock lock(grpc_mutex_cond);
+    grpc_cond.erase(cond);
+}
+
+/*
+ * reset all conds in forked processes
+ */
+static void grpc_reset_conds() {
+    for (auto c : grpc_cond) {
+        memset(c, 0, sizeof(pthread_cond_t));
+    }
+    grpc_cond.clear();
+}
+
+void grpc_clean_after_fork(void) {
+    // init mutexes (use my_mu_init() instead of gpr_mu_init() so that we don't
+    // add these to the list of GRPC mutexes)
+    grpc_mutex_socket_fd = (gpr_mu *)malloc(sizeof(gpr_mu)); my_mu_init(grpc_mutex_socket_fd);
+    grpc_mutex_once = (gpr_mu *)malloc(sizeof(gpr_mu)); my_mu_init(grpc_mutex_once);
+    grpc_mutex_mutex = (gpr_mu *)malloc(sizeof(gpr_mu)); my_mu_init(grpc_mutex_mutex);
+    grpc_mutex_cond = (gpr_mu *)malloc(sizeof(gpr_mu)); my_mu_init(grpc_mutex_cond);
+
+    if (g_initializations == 0) {
+        return;
+    }
+
+    /*
+     * these variables hold a pointer to internal variables which
+     * we manually need to reset before creating a new connection
+     */
+    extern void **fork_g_event_engine;                              // see ev_posix.cc
+    extern void **fork_g_resolver_registry_state;                   // see resolver_registry.cc
+    extern void **fork_g_policy_registry_state;                     // see lb_policy_registry.cc
+    extern void **fork_g_handshaker_factory_lists;                  // see handshaker_registry.cc
+    extern void **fork_g_registered_parsers;                        // see service_config.cc
+    extern void **fork_g_current_source_addr_factory;               // see address_sorting.c
+    extern void **fork_g_poller;                                    // see backup_poller.cc
+    extern void **fork_g_grpc_control_plane_creds;                  // see credentials.cc
+    extern void *fork_g_this_thread_state;                          // see executor.cc
+    extern int fork_g_this_thread_state_size;                       // see executor.cc
+    extern void *fork_executors;                                    // see executor.cc
+    extern int fork_executors_size;                                 // see executor.cc
+    extern void (*fork_reset_event_manager_on_fork)();              // see ev_epoll1_linux.cc
+
+    grpc_close_sockets();
+    grpc_reset_once_inits();
+    grpc_reset_mutexes();
+    grpc_reset_conds();
+
+    // manually reset event manager
+    (*fork_reset_event_manager_on_fork)();
+
+    for (int i = 0; i < g_number_of_plugins; i++) {
+        g_all_of_the_plugins[i].init = nullptr;
+        g_all_of_the_plugins[i].destroy = nullptr;
+    }
+    g_number_of_plugins = 0;
+
+    *fork_g_event_engine = nullptr;
+    *fork_g_resolver_registry_state = nullptr;
+    *fork_g_policy_registry_state = nullptr;
+    *fork_g_handshaker_factory_lists = nullptr;
+    *fork_g_registered_parsers = nullptr;
+    *fork_g_current_source_addr_factory = NULL;
+    *fork_g_poller = nullptr;
+    *fork_g_grpc_control_plane_creds = nullptr;
+
+    memset(fork_g_this_thread_state, 0, fork_g_this_thread_state_size);
+    memset(fork_executors, 0, fork_executors_size);
+}
+
+//*************************************************
