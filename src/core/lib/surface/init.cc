@@ -252,6 +252,7 @@ void grpc_maybe_wait_for_async_shutdown(void) {
  * Workaround to support forking
  ***********************************************/
 #include <set>
+#include <vector>
 #include <unistd.h>
 
 static gpr_mu *grpc_mutex_socket_fd, *grpc_mutex_once, *grpc_mutex_mutex, *grpc_mutex_cond;
