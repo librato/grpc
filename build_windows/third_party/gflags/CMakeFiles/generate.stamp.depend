@@ -1,0 +1,16 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckCXXSymbolExists.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckIncludeFile.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckSymbolExists.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckTypeSize.c.in
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckTypeSize.cmake
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckTypeSize/__int32.cpp
+C:/work/projects/grpc/third_party/gflags/CMakeLists.txt
+C:/work/projects/grpc/third_party/gflags/cmake/config.cmake.in
+C:/work/projects/grpc/third_party/gflags/cmake/utils.cmake
+C:/work/projects/grpc/third_party/gflags/cmake/version.cmake.in
+C:/work/projects/grpc/third_party/gflags/src/defines.h.in
+C:/work/projects/grpc/third_party/gflags/src/gflags.h.in
+C:/work/projects/grpc/third_party/gflags/src/gflags_completions.h.in
+C:/work/projects/grpc/third_party/gflags/src/gflags_declare.h.in
