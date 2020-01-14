@@ -105,28 +105,28 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(ProjectName).dir\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party</OutDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party</OutDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party</OutDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party</OutDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party</OutDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party</OutDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party</OutDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party</OutDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
