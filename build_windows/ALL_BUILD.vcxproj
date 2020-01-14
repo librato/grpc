@@ -1,0 +1,944 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8E44CAB0-596B-33ED-9AA6-D336E360A6CC}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\work\projects\grpc\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/work/projects/grpc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeCCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeCXXCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeRCCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeSystem.cmake;C:\work\projects\grpc\cmake\address_sorting.cmake;C:\work\projects\grpc\cmake\benchmark.cmake;C:\work\projects\grpc\cmake\cares.cmake;C:\work\projects\grpc\cmake\gRPCConfig.cmake.in;C:\work\projects\grpc\cmake\gRPCConfigVersion.cmake.in;C:\work\projects\grpc\cmake\gflags.cmake;C:\work\projects\grpc\cmake\msvc_static_runtime.cmake;C:\work\projects\grpc\cmake\protobuf.cmake;C:\work\projects\grpc\cmake\ssl.cmake;C:\work\projects\grpc\cmake\upb.cmake;C:\work\projects\grpc\cmake\zlib.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\work\projects\grpc\build_windows\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/work/projects/grpc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeCCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeCXXCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeRCCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeSystem.cmake;C:\work\projects\grpc\cmake\address_sorting.cmake;C:\work\projects\grpc\cmake\benchmark.cmake;C:\work\projects\grpc\cmake\cares.cmake;C:\work\projects\grpc\cmake\gRPCConfig.cmake.in;C:\work\projects\grpc\cmake\gRPCConfigVersion.cmake.in;C:\work\projects\grpc\cmake\gflags.cmake;C:\work\projects\grpc\cmake\msvc_static_runtime.cmake;C:\work\projects\grpc\cmake\protobuf.cmake;C:\work\projects\grpc\cmake\ssl.cmake;C:\work\projects\grpc\cmake\upb.cmake;C:\work\projects\grpc\cmake\zlib.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\work\projects\grpc\build_windows\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/work/projects/grpc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeCCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeCXXCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeRCCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeSystem.cmake;C:\work\projects\grpc\cmake\address_sorting.cmake;C:\work\projects\grpc\cmake\benchmark.cmake;C:\work\projects\grpc\cmake\cares.cmake;C:\work\projects\grpc\cmake\gRPCConfig.cmake.in;C:\work\projects\grpc\cmake\gRPCConfigVersion.cmake.in;C:\work\projects\grpc\cmake\gflags.cmake;C:\work\projects\grpc\cmake\msvc_static_runtime.cmake;C:\work\projects\grpc\cmake\protobuf.cmake;C:\work\projects\grpc\cmake\ssl.cmake;C:\work\projects\grpc\cmake\upb.cmake;C:\work\projects\grpc\cmake\zlib.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\work\projects\grpc\build_windows\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/work/projects/grpc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeCCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeCXXCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeRCCompiler.cmake;C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CMakeSystem.cmake;C:\work\projects\grpc\cmake\address_sorting.cmake;C:\work\projects\grpc\cmake\benchmark.cmake;C:\work\projects\grpc\cmake\cares.cmake;C:\work\projects\grpc\cmake\gRPCConfig.cmake.in;C:\work\projects\grpc\cmake\gRPCConfigVersion.cmake.in;C:\work\projects\grpc\cmake\gflags.cmake;C:\work\projects\grpc\cmake\msvc_static_runtime.cmake;C:\work\projects\grpc\cmake\protobuf.cmake;C:\work\projects\grpc\cmake\ssl.cmake;C:\work\projects\grpc\cmake\upb.cmake;C:\work\projects\grpc\cmake\zlib.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\work\projects\grpc\build_windows\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\ZERO_CHECK.vcxproj">
+      <Project>{DB23DD04-F88C-3A76-B70E-2A167567223A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\cares\cares\acountry.vcxproj">
+      <Project>{FCDB1185-FBA4-3A87-B2F5-523D1B0D6AFC}</Project>
+      <Name>acountry</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\address_sorting.vcxproj">
+      <Project>{8931E6E0-CB7A-3589-8973-445C788F3F91}</Project>
+      <Name>address_sorting</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\cares\cares\adig.vcxproj">
+      <Project>{5DFEE638-B240-3ABC-8775-1ED01269AD14}</Project>
+      <Name>adig</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\cares\cares\ahost.vcxproj">
+      <Project>{74D34F62-61B3-3B0F-8CB8-E3C691B36745}</Project>
+      <Name>ahost</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\asn1\asn1.vcxproj">
+      <Project>{2D65E5DF-79FB-361D-97A8-13F60F87D53A}</Project>
+      <Name>asn1</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\base64\base64.vcxproj">
+      <Project>{3DC8C885-DD4C-3BA8-AD83-6CF6C3B84EAE}</Project>
+      <Name>base64</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\basic_test.vcxproj">
+      <Project>{14BB8269-D962-316B-BD7F-E13BC88BBC72}</Project>
+      <Name>basic_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\src\benchmark.vcxproj">
+      <Project>{9A31F2E2-A04B-3B27-8B7A-8561861C04A3}</Project>
+      <Name>benchmark</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\src\benchmark_main.vcxproj">
+      <Project>{0DD325A7-0B30-3901-A758-AF78E8F49EB2}</Project>
+      <Name>benchmark_main</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\benchmark_test.vcxproj">
+      <Project>{295ED48D-C597-3C99-9D0B-7F961A790620}</Project>
+      <Name>benchmark_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\bio\bio.vcxproj">
+      <Project>{522E4952-7F06-348C-8471-67DAC29238BB}</Project>
+      <Name>bio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\bio\bio_decrepit.vcxproj">
+      <Project>{59CBADCE-902F-335F-B3F6-F9594E5D8964}</Project>
+      <Name>bio_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\blowfish\blowfish.vcxproj">
+      <Project>{0EEB8908-99BF-3EAF-890E-F32C61C7C739}</Project>
+      <Name>blowfish</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\bn_extra\bn_extra.vcxproj">
+      <Project>{2C51BBE0-04D5-31B9-9E3E-7A6D43DE01D1}</Project>
+      <Name>bn_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\boringssl_gtest.vcxproj">
+      <Project>{8A80D0F2-3187-30A7-9E4C-821B7A1D4306}</Project>
+      <Name>boringssl_gtest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\test\boringssl_gtest_main.vcxproj">
+      <Project>{4F6A6E0B-13EB-3C39-809D-9A245F24BCE8}</Project>
+      <Name>boringssl_gtest_main</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\tool\bssl.vcxproj">
+      <Project>{2A051ABE-18B1-3EE2-AE2C-19E0E53F27FE}</Project>
+      <Name>bssl</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\ssl\test\bssl_shim.vcxproj">
+      <Project>{59FF5812-BDDD-39A6-BE3E-5263891F64CB}</Project>
+      <Name>bssl_shim</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\buf\buf.vcxproj">
+      <Project>{EA489099-A3C7-36EC-93B7-0BF17E8BB9AF}</Project>
+      <Name>buf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\bytestring\bytestring.vcxproj">
+      <Project>{E7F5CDDB-8FE6-3560-B2A3-542B6FEDE760}</Project>
+      <Name>bytestring</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\cares\cares\c-ares.vcxproj">
+      <Project>{CC1D950F-FE34-3908-A15F-793F8041C349}</Project>
+      <Name>c-ares</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\cast\cast.vcxproj">
+      <Project>{0192EB7C-616D-385D-8491-304AC01A6EB2}</Project>
+      <Name>cast</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\cfb\cfb.vcxproj">
+      <Project>{6F5D2A6A-6CA3-3C39-A6B9-B1E38D4F5FEE}</Project>
+      <Name>cfb</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\chacha\chacha.vcxproj">
+      <Project>{8F1F5B86-7536-3E06-B72E-67F15F3D2AEF}</Project>
+      <Name>chacha</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\check_epollexclusive.vcxproj">
+      <Project>{9692930B-105A-3F2D-B218-003D9F83B611}</Project>
+      <Name>check_epollexclusive</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\cipher_extra\cipher_extra.vcxproj">
+      <Project>{786BF7D5-8D38-3226-81AE-60ED2E8112A2}</Project>
+      <Name>cipher_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\cmac\cmac.vcxproj">
+      <Project>{84470C9B-262E-3C8B-9F2F-DF410D5B3E89}</Project>
+      <Name>cmac</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\complexity_test.vcxproj">
+      <Project>{D189C7E2-4958-3B61-94F5-FBA11A2DF94B}</Project>
+      <Name>complexity_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\conf\conf.vcxproj">
+      <Project>{0E876D5A-704A-308E-BC55-36919E997763}</Project>
+      <Name>conf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\crypto.vcxproj">
+      <Project>{E55BC394-56EB-3E95-882C-95BD19C6BC43}</Project>
+      <Name>crypto</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\crypto_base.vcxproj">
+      <Project>{8D700B02-CC1A-3975-AEBF-012C0AB38DAA}</Project>
+      <Name>crypto_base</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\crypto_test.vcxproj">
+      <Project>{30BD0561-3481-37B4-A09C-6CB9262B9731}</Project>
+      <Name>crypto_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto_test_data.vcxproj">
+      <Project>{7EEC003C-1772-3234-B6AC-48FD242671F2}</Project>
+      <Name>crypto_test_data</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\curve25519\curve25519.vcxproj">
+      <Project>{B9068EE7-55E5-3AAD-8819-2953076E6AED}</Project>
+      <Name>curve25519</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\decrepit.vcxproj">
+      <Project>{EA74625C-FD92-38DC-8827-1B8918EC034F}</Project>
+      <Name>decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\decrepit_test.vcxproj">
+      <Project>{6B9F29F5-9247-3D76-817D-3F7709F17CA4}</Project>
+      <Name>decrepit_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\des\des_decrepit.vcxproj">
+      <Project>{058BDF68-703D-3735-8AD5-3B2F54C160DE}</Project>
+      <Name>des_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\dh\dh.vcxproj">
+      <Project>{24D1E069-70B3-3369-B378-1A4F5117CC6B}</Project>
+      <Name>dh</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\dh\dh_decrepit.vcxproj">
+      <Project>{2F38B552-D182-3096-81E1-5D0A9E0EC628}</Project>
+      <Name>dh_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\diagnostics_test.vcxproj">
+      <Project>{BDEE1928-4DF6-3163-BEE8-342FE7F6F9CD}</Project>
+      <Name>diagnostics_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\digest_extra\digest_extra.vcxproj">
+      <Project>{C73FE13E-2AAF-31C9-B73B-EC22F5D9AC87}</Project>
+      <Name>digest_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\display_aggregates_only_test.vcxproj">
+      <Project>{ED584F61-D7D5-30D9-B11F-A2A9197CAD07}</Project>
+      <Name>display_aggregates_only_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\donotoptimize_test.vcxproj">
+      <Project>{733EF5D5-D123-31A2-BCC1-9461C9B1C33F}</Project>
+      <Name>donotoptimize_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\dsa\dsa.vcxproj">
+      <Project>{AB058B77-C6AB-30F5-9CDE-058A68349055}</Project>
+      <Name>dsa</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\dsa\dsa_decrepit.vcxproj">
+      <Project>{FF1F0C47-970B-3654-BF05-662B0F2B308B}</Project>
+      <Name>dsa_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\ec_extra\ec_extra.vcxproj">
+      <Project>{79AFDC8D-4CD9-35F5-B3F0-AAA4E9D5B7FB}</Project>
+      <Name>ec_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\ecdh\ecdh.vcxproj">
+      <Project>{EA6CC1E7-3204-39D6-8F57-9090E218D382}</Project>
+      <Name>ecdh</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\ecdsa_extra\ecdsa_extra.vcxproj">
+      <Project>{48E920DF-EA27-3CC0-A5A7-ED14CF180C05}</Project>
+      <Name>ecdsa_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\engine\engine.vcxproj">
+      <Project>{8839C970-4D73-35EB-A7C0-F8BF53DFAD4C}</Project>
+      <Name>engine</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\err\err.vcxproj">
+      <Project>{B0FFE9A4-3747-323F-82AC-3ED95842658F}</Project>
+      <Name>err</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\evp\evp.vcxproj">
+      <Project>{F5E343BF-FEB4-34F7-9578-1F3CC9AA2416}</Project>
+      <Name>evp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\evp\evp_decrepit.vcxproj">
+      <Project>{4AEFE566-EEF8-346D-BF3B-52BBF8DA93AD}</Project>
+      <Name>evp_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\zlib\example.vcxproj">
+      <Project>{AD9A2BEA-F7E3-3F5B-BF9A-9F3014DD3E17}</Project>
+      <Name>example</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\third_party\fiat\fiat.vcxproj">
+      <Project>{65F1FF1B-3895-3B84-AF5B-27F6B0110571}</Project>
+      <Name>fiat</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\filter_test.vcxproj">
+      <Project>{4354993F-8F1D-3984-A590-4B7DC5A9BF69}</Project>
+      <Name>filter_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\fipsmodule\fipsmodule.vcxproj">
+      <Project>{3AA29996-3599-3CCA-9A16-24E2F87B6811}</Project>
+      <Name>fipsmodule</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\fixture_test.vcxproj">
+      <Project>{4B28BC8C-86F0-30D8-8093-0A3BA6DF0DFB}</Project>
+      <Name>fixture_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\gen_hpack_tables.vcxproj">
+      <Project>{14AF1449-D2C7-38D4-A739-F60D99779012}</Project>
+      <Name>gen_hpack_tables</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\gen_legal_metadata_characters.vcxproj">
+      <Project>{11446CC4-1DDA-3249-A2D5-3F3804C5295F}</Project>
+      <Name>gen_legal_metadata_characters</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\gen_percent_encoding_tables.vcxproj">
+      <Project>{1A9899C0-F01F-3B09-B76D-04CB64801CE3}</Project>
+      <Name>gen_percent_encoding_tables</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\gflags\gflags_nothreads_static.vcxproj">
+      <Project>{0CDFCA28-E02E-338D-8D1F-7AB06A50D637}</Project>
+      <Name>gflags_nothreads_static</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\gpr.vcxproj">
+      <Project>{7BC539D0-2002-3B4F-BCBA-4ECA59B8180F}</Project>
+      <Name>gpr</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc.vcxproj">
+      <Project>{C128CF66-8961-3858-9D14-48A868668B68}</Project>
+      <Name>grpc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc++.vcxproj">
+      <Project>{93A50003-4C61-33E1-9FF2-580D86293D45}</Project>
+      <Name>grpc++</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc++_error_details.vcxproj">
+      <Project>{EDA02923-7CAF-3DD0-800E-02499A30C45C}</Project>
+      <Name>grpc++_error_details</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc++_reflection.vcxproj">
+      <Project>{26A8AF46-279F-30B9-9BA5-1A1AE2779E88}</Project>
+      <Name>grpc++_reflection</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc++_unsecure.vcxproj">
+      <Project>{41E464C8-8E47-33A6-9AC1-E174796EDF44}</Project>
+      <Name>grpc++_unsecure</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_cpp_plugin.vcxproj">
+      <Project>{AA39B717-E012-3CFC-A426-2D6EEDB267FC}</Project>
+      <Name>grpc_cpp_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_create_jwt.vcxproj">
+      <Project>{51F6AD76-A849-3E82-AF3D-B2EEBE3AADD1}</Project>
+      <Name>grpc_create_jwt</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_cronet.vcxproj">
+      <Project>{9F7AC165-9CAD-3DF4-9935-4075FE950D38}</Project>
+      <Name>grpc_cronet</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_csharp_ext.vcxproj">
+      <Project>{7A429EB8-71D7-3A10-9FCF-B63F0F8A680A}</Project>
+      <Name>grpc_csharp_ext</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_csharp_plugin.vcxproj">
+      <Project>{15C6ACCE-DCCA-35E3-835C-3F6146B3C131}</Project>
+      <Name>grpc_csharp_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_node_plugin.vcxproj">
+      <Project>{48AA9DC4-C4EA-3D90-BD72-6EF061830B5C}</Project>
+      <Name>grpc_node_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_objective_c_plugin.vcxproj">
+      <Project>{A65BE9AC-3114-3EFD-9DE5-1A02FB982C20}</Project>
+      <Name>grpc_objective_c_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_php_plugin.vcxproj">
+      <Project>{DB3ABD5F-5968-3961-A35E-78E8B007D0AB}</Project>
+      <Name>grpc_php_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_plugin_support.vcxproj">
+      <Project>{48E1D328-8880-30CC-904E-B857D1497E5F}</Project>
+      <Name>grpc_plugin_support</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_print_google_default_creds_token.vcxproj">
+      <Project>{175BF544-2BCA-31E8-9CA1-2E8E682804EB}</Project>
+      <Name>grpc_print_google_default_creds_token</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_python_plugin.vcxproj">
+      <Project>{A356403A-19F7-3259-8867-A2C7B27EDCC5}</Project>
+      <Name>grpc_python_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_ruby_plugin.vcxproj">
+      <Project>{C1372CED-3A37-3940-80F3-321B0A1E30AD}</Project>
+      <Name>grpc_ruby_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_unsecure.vcxproj">
+      <Project>{DC3E5DC9-3CAB-3CAB-9C61-6B3D9DFB05B1}</Project>
+      <Name>grpc_unsecure</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpc_verify_jwt.vcxproj">
+      <Project>{22D8DDBB-EFBF-3DD6-9CC8-00EE0C697D07}</Project>
+      <Name>grpc_verify_jwt</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\grpcpp_channelz.vcxproj">
+      <Project>{7B3B77E8-EF36-3EE3-B0E6-40C7119020A0}</Project>
+      <Name>grpcpp_channelz</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\hkdf\hkdf.vcxproj">
+      <Project>{F2E0CAE3-221D-354D-8AEC-9E8F26A484EF}</Project>
+      <Name>hkdf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\internal_threading_test.vcxproj">
+      <Project>{35908269-8F0B-34FA-A6B0-E01AD3D8DDC2}</Project>
+      <Name>internal_threading_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\lhash\lhash.vcxproj">
+      <Project>{542CB5DE-384F-3C42-AFA4-DB0BF13FFB9B}</Project>
+      <Name>lhash</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\protobuf\libprotobuf.vcxproj">
+      <Project>{CF414E0E-D1A6-3353-BEB3-E4C78E7DDCB3}</Project>
+      <Name>libprotobuf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\protobuf\libprotobuf-lite.vcxproj">
+      <Project>{DEE9699A-46A3-393B-BB8B-E77A06298551}</Project>
+      <Name>libprotobuf-lite</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\protobuf\libprotoc.vcxproj">
+      <Project>{EC3E0462-AAC5-3B34-9CF2-23E17D952E2A}</Project>
+      <Name>libprotoc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\link_main_test.vcxproj">
+      <Project>{A9055B7F-DE96-3B93-A149-1BA20DE0DA7F}</Project>
+      <Name>link_main_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\map_test.vcxproj">
+      <Project>{E3928B52-863C-3FA0-BDB3-89EA3AA3D542}</Project>
+      <Name>map_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\memory_manager_test.vcxproj">
+      <Project>{20AB8EF2-AE37-325E-81A6-5254B1E4A009}</Project>
+      <Name>memory_manager_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\zlib\minigzip.vcxproj">
+      <Project>{3E58A40E-7265-3D41-A4CC-5FDE29EC87EC}</Project>
+      <Name>minigzip</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\multiple_ranges_test.vcxproj">
+      <Project>{0F45BBB6-19D7-351C-8984-3EB1FD5D7F4A}</Project>
+      <Name>multiple_ranges_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\obj\obj.vcxproj">
+      <Project>{23D6093D-F0D6-31CB-9924-C7A33A07C31E}</Project>
+      <Name>obj</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\obj\obj_decrepit.vcxproj">
+      <Project>{B1CFECA6-97F6-3811-85BC-5F99DD46052E}</Project>
+      <Name>obj_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\options_test.vcxproj">
+      <Project>{74E19C7A-1C7A-36ED-AA09-1BDF62EB31AC}</Project>
+      <Name>options_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\output_test_helper.vcxproj">
+      <Project>{753F5B8C-B862-31A7-895B-F4CA8F8FD8A1}</Project>
+      <Name>output_test_helper</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\pem\pem.vcxproj">
+      <Project>{B4705396-A9EF-3939-8ECF-4DC465658BDC}</Project>
+      <Name>pem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\pkcs7\pkcs7.vcxproj">
+      <Project>{814AE31C-ED0E-3638-B0EA-358FEA3CEFD2}</Project>
+      <Name>pkcs7</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\pkcs8\pkcs8_lib.vcxproj">
+      <Project>{392565FF-E4AD-3ED9-B3A8-E48BC4F56B60}</Project>
+      <Name>pkcs8_lib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\poly1305\poly1305.vcxproj">
+      <Project>{CACE5659-256E-3272-8DA4-EFCA53721756}</Project>
+      <Name>poly1305</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\pool\pool.vcxproj">
+      <Project>{3EE5DB97-8B16-3F3B-AD2D-1870369DB37E}</Project>
+      <Name>pool</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\protobuf\protoc.vcxproj">
+      <Project>{ED3EF92C-797C-30F1-9051-377EBFD1A7F2}</Project>
+      <Name>protoc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\rand_extra\rand_extra.vcxproj">
+      <Project>{5DA421B9-B46C-3CE2-B519-36A37E202362}</Project>
+      <Name>rand_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\rc4\rc4.vcxproj">
+      <Project>{30845B5A-BBF0-322A-A21F-BC5EA647BB7C}</Project>
+      <Name>rc4</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\rc4\rc4_decrepit.vcxproj">
+      <Project>{F0F9C39C-6B43-35F3-A1BF-AE5687AA5513}</Project>
+      <Name>rc4_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\register_benchmark_test.vcxproj">
+      <Project>{8218D91A-9C14-3585-B626-4F98E9ECE618}</Project>
+      <Name>register_benchmark_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\report_aggregates_only_test.vcxproj">
+      <Project>{99819C07-56B1-3802-8A24-9F1E8B6FA47B}</Project>
+      <Name>report_aggregates_only_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\reporter_output_test.vcxproj">
+      <Project>{2F6FA0C6-F7E1-3694-BA22-A9D550EFA5C9}</Project>
+      <Name>reporter_output_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\ripemd\ripemd_decrepit.vcxproj">
+      <Project>{DD369152-3F35-3223-909E-817E2978A6D5}</Project>
+      <Name>ripemd_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\rsa\rsa_decrepit.vcxproj">
+      <Project>{D0FD0D60-0EA9-31BE-8921-99CF09ABB414}</Project>
+      <Name>rsa_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\rsa_extra\rsa_extra.vcxproj">
+      <Project>{E88B5465-C046-3898-89EE-D265451057E9}</Project>
+      <Name>rsa_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\skip_with_error_test.vcxproj">
+      <Project>{F8D83910-9DAB-3666-8339-F10FAA8C3D62}</Project>
+      <Name>skip_with_error_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\ssl\ssl.vcxproj">
+      <Project>{5D6B5024-D182-3C07-A746-34E57A13E067}</Project>
+      <Name>ssl</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\ssl\ssl_decrepit.vcxproj">
+      <Project>{6A7EC0CF-2C37-34B1-9387-C90F4F78DE18}</Project>
+      <Name>ssl_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\ssl\ssl_test.vcxproj">
+      <Project>{3D971453-52BF-3607-9B51-07FA565A979D}</Project>
+      <Name>ssl_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\stack\stack.vcxproj">
+      <Project>{8814184B-9AB6-3854-863E-470BFB579102}</Project>
+      <Name>stack</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\templated_fixture_test.vcxproj">
+      <Project>{6D43A56A-7757-305F-86C4-6FDF3E2193F0}</Project>
+      <Name>templated_fixture_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\test\test_support.vcxproj">
+      <Project>{B76DDCCD-9531-3341-A0A0-FAB59AA6CE8D}</Project>
+      <Name>test_support</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\user_counters_tabular_test.vcxproj">
+      <Project>{29AF40FB-0494-32E1-B13F-8FEB4B47FE3D}</Project>
+      <Name>user_counters_tabular_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\user_counters_test.vcxproj">
+      <Project>{CF8F0C07-6004-36CC-966A-F1F47EB393FE}</Project>
+      <Name>user_counters_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\benchmark\test\user_counters_thousands_test.vcxproj">
+      <Project>{80A1C7DF-26BD-37C5-97C3-F22AA8F0894F}</Project>
+      <Name>user_counters_thousands_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\x509\x509.vcxproj">
+      <Project>{9E302DD4-D518-359B-93E4-3A90F0EC7C67}</Project>
+      <Name>x509</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\x509\x509_decrepit.vcxproj">
+      <Project>{0BF18580-C672-377E-966E-FC7FA615FA4B}</Project>
+      <Name>x509_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\x509v3\x509v3.vcxproj">
+      <Project>{9AA1A774-F9A6-306E-88BC-ABFB92D7B698}</Project>
+      <Name>x509v3</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\xts\xts.vcxproj">
+      <Project>{A9995B0F-0E07-38DC-991C-FD8979C717D0}</Project>
+      <Name>xts</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\zlib\zlib.vcxproj">
+      <Project>{0741F039-1635-3498-933E-DD42554F580F}</Project>
+      <Name>zlib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\zlib\zlibstatic.vcxproj">
+      <Project>{2661E602-5D29-33CF-AE99-B1F088DFCBD8}</Project>
+      <Name>zlibstatic</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

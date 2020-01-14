@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v142:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native64Bit:WindowsTargetPlatformVersion=10.0.17763.0
+Debug|x64|C:\work\projects\grpc\build_windows\CMakeFiles\3.15.19101501-MSVC_2\CompilerIdC\|

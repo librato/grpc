@@ -1,0 +1,23 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CMakeDependentOption.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckCSourceCompiles.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckIncludeFile.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckLibraryExists.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/FindThreads.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/GNUInstallDirs.cmake
+C:/work/projects/grpc/third_party/protobuf/cmake/CMakeLists.txt
+C:/work/projects/grpc/third_party/protobuf/cmake/extract_includes.bat.in
+C:/work/projects/grpc/third_party/protobuf/cmake/install.cmake
+C:/work/projects/grpc/third_party/protobuf/cmake/libprotobuf-lite.cmake
+C:/work/projects/grpc/third_party/protobuf/cmake/libprotobuf.cmake
+C:/work/projects/grpc/third_party/protobuf/cmake/libprotoc.cmake
+C:/work/projects/grpc/third_party/protobuf/cmake/protobuf-config-version.cmake.in
+C:/work/projects/grpc/third_party/protobuf/cmake/protobuf-config.cmake.in
+C:/work/projects/grpc/third_party/protobuf/cmake/protobuf-lite.pc.cmake
+C:/work/projects/grpc/third_party/protobuf/cmake/protobuf-module.cmake.in
+C:/work/projects/grpc/third_party/protobuf/cmake/protobuf-options.cmake
+C:/work/projects/grpc/third_party/protobuf/cmake/protobuf.pc.cmake
+C:/work/projects/grpc/third_party/protobuf/cmake/protoc.cmake
+C:/work/projects/grpc/third_party/protobuf/cmake/version.rc.in

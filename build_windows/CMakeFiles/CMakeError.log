@@ -1,0 +1,1289 @@
+Determining if the include file pthread.h exists failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_4706a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckIncludeFile.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4706a.dir\Debug\\" /Fd"cmTC_4706a.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_4706a.vcxproj]
+
+
+
+Performing C++ SOURCE FILE Test BENCHMARK_HAS_O3_FLAG failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_a5923.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  src.cxx
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W4 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D BENCHMARK_HAS_O3_FLAG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a5923.dir\Debug\\" /Fd"cmTC_a5923.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue  -O3 C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\src.cxx
+cl : command line warning D9002: ignoring unknown option '-O3' [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_a5923.vcxproj]
+  cmTC_a5923.vcxproj -> C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\Debug\cmTC_a5923.exe
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test BENCHMARK_HAS_CXX03_FLAG failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_807b3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  src.cxx
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W4 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D BENCHMARK_HAS_CXX03_FLAG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_807b3.dir\Debug\\" /Fd"cmTC_807b3.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue  -std=c++03 C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\src.cxx
+cl : command line warning D9002: ignoring unknown option '-std=c++03' [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_807b3.vcxproj]
+  cmTC_807b3.vcxproj -> C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\Debug\cmTC_807b3.exe
+
+
+Source file was:
+int main() { return 0; }
+Determining if the function res_servicename exists in the resolv failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_35699.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckFunctionExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=res_servicename /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_35699.dir\Debug\\" /Fd"cmTC_35699.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckFunctionExists.c"
+LINK : fatal error LNK1104: cannot open file 'resolv.lib' [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_35699.vcxproj]
+
+
+
+Determining if the function gethostbyname exists in the nsl failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_4fe97.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckFunctionExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=gethostbyname /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4fe97.dir\Debug\\" /Fd"cmTC_4fe97.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckFunctionExists.c"
+LINK : fatal error LNK1104: cannot open file 'nsl.lib' [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_4fe97.vcxproj]
+
+
+
+Determining if the function gethostbyname exists in the socket failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_94dd5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckFunctionExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=gethostbyname /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_94dd5.dir\Debug\\" /Fd"cmTC_94dd5.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckFunctionExists.c"
+LINK : fatal error LNK1104: cannot open file 'socket.lib' [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_94dd5.vcxproj]
+
+
+
+Determining if the function socket exists in the socket failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_e5e4e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckFunctionExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=socket /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e5e4e.dir\Debug\\" /Fd"cmTC_e5e4e.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckFunctionExists.c"
+LINK : fatal error LNK1104: cannot open file 'socket.lib' [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_e5e4e.vcxproj]
+
+
+
+Determining if the function clock_gettime exists in the rt failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_24c5f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckFunctionExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=clock_gettime /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_24c5f.dir\Debug\\" /Fd"cmTC_24c5f.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckFunctionExists.c"
+LINK : fatal error LNK1104: cannot open file 'rt.lib' [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_24c5f.vcxproj]
+
+
+
+Determining if files sys/socket.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_884c8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_SYS_SOCKET_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_884c8.dir\Debug\\" /Fd"cmTC_884c8.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_SOCKET_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_SOCKET_H.c(2,10): fatal error C1083: Cannot open include file: 'sys/socket.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_884c8.vcxproj]
+
+
+Source:
+/* */
+#include <sys/socket.h>
+
+
+int main(void){return 0;}
+
+Determining if files arpa/inet.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_a89db.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_ARPA_INET_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a89db.dir\Debug\\" /Fd"cmTC_a89db.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_INET_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_INET_H.c(2,10): fatal error C1083: Cannot open include file: 'arpa/inet.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_a89db.vcxproj]
+
+
+Source:
+/* */
+#include <arpa/inet.h>
+
+
+int main(void){return 0;}
+
+Determining if files arpa/nameser_compat.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_c0356.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_ARPA_NAMESER_COMPAT_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c0356.dir\Debug\\" /Fd"cmTC_c0356.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_NAMESER_COMPAT_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_NAMESER_COMPAT_H.c(2,10): fatal error C1083: Cannot open include file: 'arpa/nameser_compat.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_c0356.vcxproj]
+
+
+Source:
+/* */
+#include <arpa/nameser_compat.h>
+
+
+int main(void){return 0;}
+
+Determining if files arpa/nameser.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_1dee4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_ARPA_NAMESER_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1dee4.dir\Debug\\" /Fd"cmTC_1dee4.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_NAMESER_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_NAMESER_H.c(2,10): fatal error C1083: Cannot open include file: 'arpa/nameser.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_1dee4.vcxproj]
+
+
+Source:
+/* */
+#include <arpa/nameser.h>
+
+
+int main(void){return 0;}
+
+Determining if files netdb.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_b6196.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_NETDB_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b6196.dir\Debug\\" /Fd"cmTC_b6196.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_NETDB_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_NETDB_H.c(2,10): fatal error C1083: Cannot open include file: 'netdb.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_b6196.vcxproj]
+
+
+Source:
+/* */
+#include <netdb.h>
+
+
+int main(void){return 0;}
+
+Determining if files netinet/in.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_73611.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_NETINET_IN_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_73611.dir\Debug\\" /Fd"cmTC_73611.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_IN_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_IN_H.c(2,10): fatal error C1083: Cannot open include file: 'netinet/in.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_73611.vcxproj]
+
+
+Source:
+/* */
+#include <netinet/in.h>
+
+
+int main(void){return 0;}
+
+Determining if files netinet/tcp.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_ac00f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_NETINET_TCP_H.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ac00f.dir\Debug\\" /Fd"cmTC_ac00f.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_TCP_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_TCP_H.c(2,10): fatal error C1083: Cannot open include file: 'netinet/tcp.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_ac00f.vcxproj]
+
+
+Source:
+/* */
+#include <netinet/tcp.h>
+
+
+int main(void){return 0;}
+
+Determining if files net/if.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_dae15.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_NET_IF_H.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dae15.dir\Debug\\" /Fd"cmTC_dae15.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_NET_IF_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_NET_IF_H.c(2,10): fatal error C1083: Cannot open include file: 'net/if.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_dae15.vcxproj]
+
+
+Source:
+/* */
+#include <net/if.h>
+
+
+int main(void){return 0;}
+
+Determining if files socket.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_d4788.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_SOCKET_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d4788.dir\Debug\\" /Fd"cmTC_d4788.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SOCKET_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SOCKET_H.c(2,10): fatal error C1083: Cannot open include file: 'socket.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_d4788.vcxproj]
+
+
+Source:
+/* */
+#include <socket.h>
+
+
+int main(void){return 0;}
+
+Determining if files strings.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_ab38a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_STRINGS_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ab38a.dir\Debug\\" /Fd"cmTC_ab38a.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_STRINGS_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_STRINGS_H.c(2,10): fatal error C1083: Cannot open include file: 'strings.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_ab38a.vcxproj]
+
+
+Source:
+/* */
+#include <strings.h>
+
+
+int main(void){return 0;}
+
+Determining if files stropts.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_244e5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_STROPTS_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_244e5.dir\Debug\\" /Fd"cmTC_244e5.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_STROPTS_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_STROPTS_H.c(2,10): fatal error C1083: Cannot open include file: 'stropts.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_244e5.vcxproj]
+
+
+Source:
+/* */
+#include <stropts.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/ioctl.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_f22a4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_SYS_IOCTL_H.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f22a4.dir\Debug\\" /Fd"cmTC_f22a4.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_IOCTL_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_IOCTL_H.c(2,10): fatal error C1083: Cannot open include file: 'sys/ioctl.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_f22a4.vcxproj]
+
+
+Source:
+/* */
+#include <sys/ioctl.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/param.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_5a108.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_SYS_PARAM_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5a108.dir\Debug\\" /Fd"cmTC_5a108.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_PARAM_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_PARAM_H.c(2,10): fatal error C1083: Cannot open include file: 'sys/param.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_5a108.vcxproj]
+
+
+Source:
+/* */
+#include <sys/param.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/select.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_85872.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_SYS_SELECT_H.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_85872.dir\Debug\\" /Fd"cmTC_85872.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_SELECT_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_SELECT_H.c(2,10): fatal error C1083: Cannot open include file: 'sys/select.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_85872.vcxproj]
+
+
+Source:
+/* */
+#include <sys/select.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/time.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_50373.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_SYS_TIME_H.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_50373.dir\Debug\\" /Fd"cmTC_50373.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_TIME_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_TIME_H.c(2,10): fatal error C1083: Cannot open include file: 'sys/time.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_50373.vcxproj]
+
+
+Source:
+/* */
+#include <sys/time.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/uio.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_706e2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_SYS_UIO_H.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_706e2.dir\Debug\\" /Fd"cmTC_706e2.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UIO_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UIO_H.c(2,10): fatal error C1083: Cannot open include file: 'sys/uio.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_706e2.vcxproj]
+
+
+Source:
+/* */
+#include <sys/uio.h>
+
+
+int main(void){return 0;}
+
+Determining if files dlfcn.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_84d48.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_DLFCN_H.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84d48.dir\Debug\\" /Fd"cmTC_84d48.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_DLFCN_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_DLFCN_H.c(2,10): fatal error C1083: Cannot open include file: 'dlfcn.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_84d48.vcxproj]
+
+
+Source:
+/* */
+#include <dlfcn.h>
+
+
+int main(void){return 0;}
+
+Determining if files unistd.h exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_d3bde.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  HAVE_UNISTD_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d3bde.dir\Debug\\" /Fd"cmTC_d3bde.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_UNISTD_H.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckIncludeFiles\HAVE_UNISTD_H.c(2,10): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_d3bde.vcxproj]
+
+
+Source:
+/* */
+#include <unistd.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test HAVE_SSIZE_T failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_173da.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  src.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D HAVE_SSIZE_T /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_173da.dir\Debug\\" /Fd"cmTC_173da.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\src.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\src.c(16,12): error C2065: 'ssize_t': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_173da.vcxproj]
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\src.c(16,12): error C2146: syntax error: missing ';' before identifier 'var_exists' [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_173da.vcxproj]
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\src.c(16,22): error C2065: 'var_exists': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_173da.vcxproj]
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\src.c(17,20): error C2065: 'var_exists': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_173da.vcxproj]
+
+
+Source file was:
+
+		#include <stdio.h>
+		#include <stdlib.h>
+	
+		#include <stdbool.h>
+		#include <sys/types.h>
+		#include <signal.h>
+		#include <stdlib.h>
+		#include <string.h>
+		#include <time.h>
+		#include <fcntl.h>
+		#include <winsock2.h>
+		#include <ws2tcpip.h>
+		#include <windows.h>
+		int main() {
+			ssize_t var_exists;
+			(void)var_exists;
+			return 0;
+		}
+	
+Determining if the O_NONBLOCK exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_389ab.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_389ab.dir\Debug\\" /Fd"cmTC_389ab.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,29): error C2065: 'O_NONBLOCK': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_389ab.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef O_NONBLOCK
+  return ((int*)(&O_NONBLOCK))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the SIOCGIFADDR exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_847b9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_847b9.dir\Debug\\" /Fd"cmTC_847b9.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,30): error C2065: 'SIOCGIFADDR': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_847b9.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef SIOCGIFADDR
+  return ((int*)(&SIOCGIFADDR))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the MSG_NOSIGNAL exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_3fe12.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3fe12.dir\Debug\\" /Fd"cmTC_3fe12.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+  CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,31): error C2065: 'MSG_NOSIGNAL': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_3fe12.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef MSG_NOSIGNAL
+  return ((int*)(&MSG_NOSIGNAL))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the SO_NONBLOCK exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_444ae.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_444ae.dir\Debug\\" /Fd"cmTC_444ae.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+  CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,30): error C2065: 'SO_NONBLOCK': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_444ae.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef SO_NONBLOCK
+  return ((int*)(&SO_NONBLOCK))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CLOCK_MONOTONIC exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_381c6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_381c6.dir\Debug\\" /Fd"cmTC_381c6.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,34): error C2065: 'CLOCK_MONOTONIC': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_381c6.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CLOCK_MONOTONIC
+  return ((int*)(&CLOCK_MONOTONIC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the bitncmp exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_b3ae7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b3ae7.dir\Debug\\" /Fd"cmTC_b3ae7.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,26): error C2065: 'bitncmp': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_b3ae7.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef bitncmp
+  return ((int*)(&bitncmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CloseSocket exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_ca014.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ca014.dir\Debug\\" /Fd"cmTC_ca014.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,30): error C2065: 'CloseSocket': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_ca014.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CloseSocket
+  return ((int*)(&CloseSocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the fcntl exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_a9b1b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a9b1b.dir\Debug\\" /Fd"cmTC_a9b1b.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,24): error C2065: 'fcntl': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_a9b1b.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fcntl
+  return ((int*)(&fcntl))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getservbyport_r exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_fec78.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fec78.dir\Debug\\" /Fd"cmTC_fec78.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,34): error C2065: 'getservbyport_r': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_fec78.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getservbyport_r
+  return ((int*)(&getservbyport_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the gettimeofday exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_48bfb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_48bfb.dir\Debug\\" /Fd"cmTC_48bfb.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,31): error C2065: 'gettimeofday': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_48bfb.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gettimeofday
+  return ((int*)(&gettimeofday))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the if_indextoname exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_fb526.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fb526.dir\Debug\\" /Fd"cmTC_fb526.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,33): error C2065: 'if_indextoname': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_fb526.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef if_indextoname
+  return ((int*)(&if_indextoname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the inet_net_pton exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_0dc3d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0dc3d.dir\Debug\\" /Fd"cmTC_0dc3d.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,32): error C2065: 'inet_net_pton': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_0dc3d.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inet_net_pton
+  return ((int*)(&inet_net_pton))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the ioctl exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_520dc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_520dc.dir\Debug\\" /Fd"cmTC_520dc.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,24): error C2065: 'ioctl': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_520dc.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef ioctl
+  return ((int*)(&ioctl))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the IoctlSocket exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_4e876.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4e876.dir\Debug\\" /Fd"cmTC_4e876.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,30): error C2065: 'IoctlSocket': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_4e876.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IoctlSocket
+  return ((int*)(&IoctlSocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strcasecmp exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_f8f3c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f8f3c.dir\Debug\\" /Fd"cmTC_f8f3c.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,29): error C2065: 'strcasecmp': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_f8f3c.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcasecmp
+  return ((int*)(&strcasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strncasecmp exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_53551.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_53551.dir\Debug\\" /Fd"cmTC_53551.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,30): error C2065: 'strncasecmp': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_53551.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncasecmp
+  return ((int*)(&strncasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strncmpi exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_fa330.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fa330.dir\Debug\\" /Fd"cmTC_fa330.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,27): error C2065: 'strncmpi': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_fa330.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncmpi
+  return ((int*)(&strncmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the writev exist failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_7797e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7797e.dir\Debug\\" /Fd"cmTC_7797e.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckSymbolExists.c(17,25): error C2065: 'writev': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_7797e.vcxproj]
+
+
+File C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <fcntl.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef writev
+  return ((int*)(&writev))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function __system_property_get exists failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_013d9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=__system_property_get /D WIN32_LEAN_AND_MEAN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_013d9.dir\Debug\\" /Fd"cmTC_013d9.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol __system_property_get referenced in function main [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_013d9.vcxproj]
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\Debug\cmTC_013d9.exe : fatal error LNK1120: 1 unresolved externals [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_013d9.vcxproj]
+
+
+
+Determining size of off64_t failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_f23de.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  OFF64_T.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f23de.dir\Debug\\" /Fd"cmTC_f23de.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CheckTypeSize\OFF64_T.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckTypeSize\OFF64_T.c(25,12): error C2065: 'off64_t': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_f23de.vcxproj]
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckTypeSize\OFF64_T.c(26,12): error C2065: 'off64_t': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_f23de.vcxproj]
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckTypeSize\OFF64_T.c(27,12): error C2065: 'off64_t': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_f23de.vcxproj]
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckTypeSize\OFF64_T.c(28,12): error C2065: 'off64_t': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_f23de.vcxproj]
+C:\work\projects\grpc\build_windows\CMakeFiles\CheckTypeSize\OFF64_T.c(29,12): error C2065: 'off64_t': undeclared identifier [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_f23de.vcxproj]
+
+
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckTypeSize/OFF64_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function fseeko exists failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_476d3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckFunctionExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_476d3.dir\Debug\\" /Fd"cmTC_476d3.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol fseeko referenced in function main [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_476d3.vcxproj]
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\Debug\cmTC_476d3.exe : fatal error LNK1120: 1 unresolved externals [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_476d3.vcxproj]
+
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: C:/work/projects/grpc/build_windows/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/MSBuild/Current/Bin/MSBuild.exe cmTC_012e5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.24.28315 for x64
+  CheckIncludeFile.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_012e5.dir\Debug\\" /Fd"cmTC_012e5.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\work\projects\grpc\build_windows\CMakeFiles\CMakeTmp\cmTC_012e5.vcxproj]
+
+
+

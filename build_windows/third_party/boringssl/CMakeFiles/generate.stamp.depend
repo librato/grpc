@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/FindCygwin.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/FindPerl.cmake
+C:/work/projects/grpc/third_party/boringssl/CMakeLists.txt
+C:/work/projects/grpc/third_party/boringssl/sources.cmake
