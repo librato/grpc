@@ -427,33 +427,35 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running gRPC C++ protocol buffer compiler on src/proto/grpc/status/status.proto</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Running gRPC C++ protocol buffer compiler on src/proto/grpc/status/status.proto</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\work\projects\grpc
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-$(SolutionDir)\third_party\protobuf\Debug\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)/../build_windows/gens --cpp_out=$(SolutionDir)/../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)/../build_windows/Debug/grpc_cpp_plugin.exe -I . -I $(SolutionDir)/../third_party/protobuf/src src/proto/grpc/status/status.proto
+$(SolutionDir)$(Platform)\$(Configuration)\third_party\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)../build_windows/gens --cpp_out=$(SolutionDir)../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)../build_windows/$(Platform)/$(Configuration)/grpc_cpp_plugin.exe -I . -I $(SolutionDir)../third_party/protobuf/src src/proto/grpc/status/status.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+if %errorlevel% neq 0 goto :VCEnd
+</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-cd C:\work\projects\grpc
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-$(SolutionDir)\third_party\protobuf\Debug\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)/../build_windows/gens --cpp_out=$(SolutionDir)/../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)/../build_windows/Debug/grpc_cpp_plugin.exe -I . -I $(SolutionDir)/../third_party/protobuf/src src/proto/grpc/status/status.proto
+$(SolutionDir)$(Platform)\$(Configuration)\third_party\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)../build_windows/gens --cpp_out=$(SolutionDir)../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)../build_windows/$(Platform)/$(Configuration)/grpc_cpp_plugin.exe -I . -I $(SolutionDir)../third_party/protobuf/src src/proto/grpc/status/status.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\..\src\proto\grpc\status\status.proto;$(SolutionDir)\third_party\protobuf\Debug\protoc.exe;$(SolutionDir)\Debug\grpc_cpp_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\..\src\proto\grpc\status\status.proto;$(SolutionDir)\third_party\protobuf\Debug\protoc.exe;$(SolutionDir)\Debug\grpc_cpp_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
+if %errorlevel% neq 0 goto :VCEnd
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\..\src\proto\grpc\status\status.proto;$(SolutionDir)$(Platform)\$(Configuration)\third_party\protoc.exe;$(SolutionDir)\Debug\grpc_cpp_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\..\src\proto\grpc\status\status.proto;$(SolutionDir)$(Platform)\$(Configuration)\third_party\protoc.exe;$(SolutionDir)\Debug\grpc_cpp_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.cc;$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.h;$(SolutionDir)\gens\src\proto\grpc\status\status_mock.grpc.pb.h;$(SolutionDir)\gens\src\proto\grpc\status\status.pb.cc;$(SolutionDir)\gens\src\proto\grpc\status\status.pb.h</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.cc;$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.h;$(SolutionDir)\gens\src\proto\grpc\status\status_mock.grpc.pb.h;$(SolutionDir)\gens\src\proto\grpc\status\status.pb.cc;$(SolutionDir)\gens\src\proto\grpc\status\status.pb.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
@@ -461,31 +463,33 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running gRPC C++ protocol buffer compiler on src/proto/grpc/status/status.proto</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Running gRPC C++ protocol buffer compiler on src/proto/grpc/status/status.proto</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\work\projects\grpc
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-$(SolutionDir)\third_party\protobuf\Release\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)/../build_windows/gens --cpp_out=$(SolutionDir)/../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)/../build_windows/Release/grpc_cpp_plugin.exe -I . -I $(SolutionDir)/../third_party/protobuf/src src/proto/grpc/status/status.proto
+$(SolutionDir)$(Platform)\$(Configuration)\third_party\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)../build_windows/gens --cpp_out=$(SolutionDir)../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)../build_windows/$(Platform)/$(Configuration)/grpc_cpp_plugin.exe -I . -I $(SolutionDir)../third_party/protobuf/src src/proto/grpc/status/status.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+if %errorlevel% neq 0 goto :VCEnd
+</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-cd C:\work\projects\grpc
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-$(SolutionDir)\third_party\protobuf\Release\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)/../build_windows/gens --cpp_out=$(SolutionDir)/../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)/../build_windows/Release/grpc_cpp_plugin.exe -I . -I $(SolutionDir)/../third_party/protobuf/src src/proto/grpc/status/status.proto
+$(SolutionDir)$(Platform)\$(Configuration)\third_party\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)../build_windows/gens --cpp_out=$(SolutionDir)../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)../build_windows/$(Platform)/$(Configuration)/grpc_cpp_plugin.exe -I . -I $(SolutionDir)../third_party/protobuf/src src/proto/grpc/status/status.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+if %errorlevel% neq 0 goto :VCEnd
+</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\..\src\proto\grpc\status\status.proto;$(SolutionDir)\third_party\protobuf\Release\protoc.exe;$(SolutionDir)\Release\grpc_cpp_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\..\src\proto\grpc\status\status.proto;$(SolutionDir)\third_party\protobuf\Release\protoc.exe;$(SolutionDir)\Release\grpc_cpp_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.cc;$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.h;$(SolutionDir)\gens\src\proto\grpc\status\status_mock.grpc.pb.h;$(SolutionDir)\gens\src\proto\grpc\status\status.pb.cc;$(SolutionDir)\gens\src\proto\grpc\status\status.pb.h</Outputs>
@@ -495,31 +499,33 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running gRPC C++ protocol buffer compiler on src/proto/grpc/status/status.proto</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Running gRPC C++ protocol buffer compiler on src/proto/grpc/status/status.proto</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\work\projects\grpc
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-$(SolutionDir)\third_party\protobuf\MinSizeRel\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)/../build_windows/gens --cpp_out=$(SolutionDir)/../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)/../build_windows/MinSizeRel/grpc_cpp_plugin.exe -I . -I $(SolutionDir)/../third_party/protobuf/src src/proto/grpc/status/status.proto
+$(SolutionDir)$(Platform)\$(Configuration)\third_party\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)../build_windows/gens --cpp_out=$(SolutionDir)../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)../build_windows/$(Platform)/$(Configuration)/grpc_cpp_plugin.exe -I . -I $(SolutionDir)../third_party/protobuf/src src/proto/grpc/status/status.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+if %errorlevel% neq 0 goto :VCEnd
+</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-cd C:\work\projects\grpc
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-$(SolutionDir)\third_party\protobuf\MinSizeRel\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)/../build_windows/gens --cpp_out=$(SolutionDir)/../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)/../build_windows/MinSizeRel/grpc_cpp_plugin.exe -I . -I $(SolutionDir)/../third_party/protobuf/src src/proto/grpc/status/status.proto
+$(SolutionDir)$(Platform)\$(Configuration)\third_party\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)../build_windows/gens --cpp_out=$(SolutionDir)../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)../build_windows/$(Platform)/$(Configuration)/grpc_cpp_plugin.exe -I . -I $(SolutionDir)../third_party/protobuf/src src/proto/grpc/status/status.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+if %errorlevel% neq 0 goto :VCEnd
+</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)\..\src\proto\grpc\status\status.proto;$(SolutionDir)\third_party\protobuf\MinSizeRel\protoc.exe;$(SolutionDir)\MinSizeRel\grpc_cpp_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)\..\src\proto\grpc\status\status.proto;$(SolutionDir)\third_party\protobuf\MinSizeRel\protoc.exe;$(SolutionDir)\MinSizeRel\grpc_cpp_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.cc;$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.h;$(SolutionDir)\gens\src\proto\grpc\status\status_mock.grpc.pb.h;$(SolutionDir)\gens\src\proto\grpc\status\status.pb.cc;$(SolutionDir)\gens\src\proto\grpc\status\status.pb.h</Outputs>
@@ -529,31 +535,33 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running gRPC C++ protocol buffer compiler on src/proto/grpc/status/status.proto</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Running gRPC C++ protocol buffer compiler on src/proto/grpc/status/status.proto</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\work\projects\grpc
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-$(SolutionDir)\third_party\protobuf\RelWithDebInfo\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)/../build_windows/gens --cpp_out=$(SolutionDir)/../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)/../build_windows/RelWithDebInfo/grpc_cpp_plugin.exe -I . -I $(SolutionDir)/../third_party/protobuf/src src/proto/grpc/status/status.proto
+$(SolutionDir)$(Platform)\$(Configuration)\third_party\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)../build_windows/gens --cpp_out=$(SolutionDir)../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)../build_windows/$(Platform)/$(Configuration)/grpc_cpp_plugin.exe -I . -I $(SolutionDir)../third_party/protobuf/src src/proto/grpc/status/status.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+if %errorlevel% neq 0 goto :VCEnd
+</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-cd C:\work\projects\grpc
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-$(SolutionDir)\third_party\protobuf\RelWithDebInfo\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)/../build_windows/gens --cpp_out=$(SolutionDir)/../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)/../build_windows/RelWithDebInfo/grpc_cpp_plugin.exe -I . -I $(SolutionDir)/../third_party/protobuf/src src/proto/grpc/status/status.proto
+$(SolutionDir)$(Platform)\$(Configuration)\third_party\protoc.exe --grpc_out=generate_mock_code=true:$(SolutionDir)../build_windows/gens --cpp_out=$(SolutionDir)../build_windows/gens --plugin=protoc-gen-grpc=$(SolutionDir)../build_windows/$(Platform)/$(Configuration)/grpc_cpp_plugin.exe -I . -I $(SolutionDir)../third_party/protobuf/src src/proto/grpc/status/status.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+if %errorlevel% neq 0 goto :VCEnd
+</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)\..\src\proto\grpc\status\status.proto;$(SolutionDir)\third_party\protobuf\RelWithDebInfo\protoc.exe;$(SolutionDir)\RelWithDebInfo\grpc_cpp_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(SolutionDir)\..\src\proto\grpc\status\status.proto;$(SolutionDir)\third_party\protobuf\RelWithDebInfo\protoc.exe;$(SolutionDir)\RelWithDebInfo\grpc_cpp_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.cc;$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.h;$(SolutionDir)\gens\src\proto\grpc\status\status_mock.grpc.pb.h;$(SolutionDir)\gens\src\proto\grpc\status\status.pb.cc;$(SolutionDir)\gens\src\proto\grpc\status\status.pb.h</Outputs>
