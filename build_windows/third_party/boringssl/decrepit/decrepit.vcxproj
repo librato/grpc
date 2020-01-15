@@ -138,7 +138,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -159,10 +159,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -175,7 +175,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -196,10 +196,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -212,7 +212,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -233,10 +233,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -249,7 +249,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -270,10 +270,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -286,7 +286,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -307,10 +307,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -323,7 +323,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -344,10 +344,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -360,7 +360,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -380,10 +380,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -396,7 +396,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -416,10 +416,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\work\projects\grpc\third_party\boringssl\third_party\googletest\include;C:\work\projects\grpc\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -431,7 +431,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\work\projects\grpc\third_party\boringssl\decrepit\CMakeLists.txt">
+    <CustomBuild Include="$(SolutionDir)\..\third_party\boringssl\decrepit\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
@@ -454,8 +454,8 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
@@ -480,8 +480,8 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
@@ -506,8 +506,8 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
@@ -532,135 +532,135 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\bio\bio_decrepit.dir\$(Configuration)\base64_bio.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\blowfish\blowfish.dir\$(Configuration)\blowfish.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\cast\cast.dir\$(Configuration)\cast.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\cast\cast.dir\$(Configuration)\cast_tables.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\cfb\cfb.dir\$(Configuration)\cfb.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\des\des_decrepit.dir\$(Configuration)\cfb64ede.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\dh\dh_decrepit.dir\$(Configuration)\dh_decrepit.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\dsa\dsa_decrepit.dir\$(Configuration)\dsa_decrepit.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\evp\evp_decrepit.dir\$(Configuration)\dss1.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\evp\evp_decrepit.dir\$(Configuration)\evp_do_all.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\obj\obj_decrepit.dir\$(Configuration)\obj_decrepit.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\rc4\rc4_decrepit.dir\$(Configuration)\rc4_decrepit.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\ripemd\ripemd_decrepit.dir\$(Configuration)\ripemd.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\rsa\rsa_decrepit.dir\$(Configuration)\rsa_decrepit.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\ssl\ssl_decrepit.dir\$(Configuration)\ssl_decrepit.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\x509\x509_decrepit.dir\$(Configuration)\x509_decrepit.obj" />
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\xts\xts.dir\$(Configuration)\xts.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\bio\bio_decrepit.dir\$(Configuration)\base64_bio.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\blowfish\blowfish.dir\$(Configuration)\blowfish.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\cast\cast.dir\$(Configuration)\cast.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\cast\cast.dir\$(Configuration)\cast_tables.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\cfb\cfb.dir\$(Configuration)\cfb.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\des\des_decrepit.dir\$(Configuration)\cfb64ede.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\dh\dh_decrepit.dir\$(Configuration)\dh_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\dsa\dsa_decrepit.dir\$(Configuration)\dsa_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\evp\evp_decrepit.dir\$(Configuration)\dss1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\evp\evp_decrepit.dir\$(Configuration)\evp_do_all.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\obj\obj_decrepit.dir\$(Configuration)\obj_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\rc4\rc4_decrepit.dir\$(Configuration)\rc4_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\ripemd\ripemd_decrepit.dir\$(Configuration)\ripemd.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\rsa\rsa_decrepit.dir\$(Configuration)\rsa_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\ssl\ssl_decrepit.dir\$(Configuration)\ssl_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\x509\x509_decrepit.dir\$(Configuration)\x509_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\xts\xts.dir\$(Configuration)\xts.obj" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\ZERO_CHECK.vcxproj">
       <Project>{DB23DD04-F88C-3A76-B70E-2A167567223A}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\bio\bio_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\bio\bio_decrepit.vcxproj">
       <Project>{59CBADCE-902F-335F-B3F6-F9594E5D8964}</Project>
       <Name>bio_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\blowfish\blowfish.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\blowfish\blowfish.vcxproj">
       <Project>{0EEB8908-99BF-3EAF-890E-F32C61C7C739}</Project>
       <Name>blowfish</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\cast\cast.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\cast\cast.vcxproj">
       <Project>{0192EB7C-616D-385D-8491-304AC01A6EB2}</Project>
       <Name>cast</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\cfb\cfb.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\cfb\cfb.vcxproj">
       <Project>{6F5D2A6A-6CA3-3C39-A6B9-B1E38D4F5FEE}</Project>
       <Name>cfb</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\crypto.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\crypto.vcxproj">
       <Project>{E55BC394-56EB-3E95-882C-95BD19C6BC43}</Project>
       <Name>crypto</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\des\des_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\des\des_decrepit.vcxproj">
       <Project>{058BDF68-703D-3735-8AD5-3B2F54C160DE}</Project>
       <Name>des_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\dh\dh_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\dh\dh_decrepit.vcxproj">
       <Project>{2F38B552-D182-3096-81E1-5D0A9E0EC628}</Project>
       <Name>dh_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\dsa\dsa_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\dsa\dsa_decrepit.vcxproj">
       <Project>{FF1F0C47-970B-3654-BF05-662B0F2B308B}</Project>
       <Name>dsa_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\evp\evp_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\evp\evp_decrepit.vcxproj">
       <Project>{4AEFE566-EEF8-346D-BF3B-52BBF8DA93AD}</Project>
       <Name>evp_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\obj\obj_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\obj\obj_decrepit.vcxproj">
       <Project>{B1CFECA6-97F6-3811-85BC-5F99DD46052E}</Project>
       <Name>obj_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\rc4\rc4_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\rc4\rc4_decrepit.vcxproj">
       <Project>{F0F9C39C-6B43-35F3-A1BF-AE5687AA5513}</Project>
       <Name>rc4_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\ripemd\ripemd_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\ripemd\ripemd_decrepit.vcxproj">
       <Project>{DD369152-3F35-3223-909E-817E2978A6D5}</Project>
       <Name>ripemd_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\rsa\rsa_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\rsa\rsa_decrepit.vcxproj">
       <Project>{D0FD0D60-0EA9-31BE-8921-99CF09ABB414}</Project>
       <Name>rsa_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\ssl\ssl.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\ssl\ssl.vcxproj">
       <Project>{5D6B5024-D182-3C07-A746-34E57A13E067}</Project>
       <Name>ssl</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\ssl\ssl_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\ssl\ssl_decrepit.vcxproj">
       <Project>{6A7EC0CF-2C37-34B1-9387-C90F4F78DE18}</Project>
       <Name>ssl_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\x509\x509_decrepit.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\x509\x509_decrepit.vcxproj">
       <Project>{0BF18580-C672-377E-966E-FC7FA615FA4B}</Project>
       <Name>x509_decrepit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\work\projects\grpc\build_windows\third_party\boringssl\decrepit\xts\xts.vcxproj">
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\decrepit\xts\xts.vcxproj">
       <Project>{A9995B0F-0E07-38DC-991C-FD8979C717D0}</Project>
       <Name>xts</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
