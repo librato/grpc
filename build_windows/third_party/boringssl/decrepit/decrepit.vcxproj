@@ -432,10 +432,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="$(SolutionDir)\..\third_party\boringssl\decrepit\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/decrepit/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/decrepit/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -444,7 +444,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -458,10 +458,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/decrepit/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/decrepit/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -470,7 +470,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -484,10 +484,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/decrepit/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/decrepit/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -496,7 +496,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -510,10 +510,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/decrepit/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/decrepit/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/decrepit/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -522,7 +522,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -539,23 +539,23 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\bio\bio_decrepit.dir\$(Configuration)\base64_bio.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\blowfish\blowfish.dir\$(Configuration)\blowfish.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\cast\cast.dir\$(Configuration)\cast.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\cast\cast.dir\$(Configuration)\cast_tables.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\cfb\cfb.dir\$(Configuration)\cfb.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\des\des_decrepit.dir\$(Configuration)\cfb64ede.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\dh\dh_decrepit.dir\$(Configuration)\dh_decrepit.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\dsa\dsa_decrepit.dir\$(Configuration)\dsa_decrepit.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\evp\evp_decrepit.dir\$(Configuration)\dss1.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\evp\evp_decrepit.dir\$(Configuration)\evp_do_all.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\obj\obj_decrepit.dir\$(Configuration)\obj_decrepit.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\rc4\rc4_decrepit.dir\$(Configuration)\rc4_decrepit.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\ripemd\ripemd_decrepit.dir\$(Configuration)\ripemd.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\rsa\rsa_decrepit.dir\$(Configuration)\rsa_decrepit.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\ssl\ssl_decrepit.dir\$(Configuration)\ssl_decrepit.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\x509\x509_decrepit.dir\$(Configuration)\x509_decrepit.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\xts\xts.dir\$(Configuration)\xts.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\bio\bio_decrepit.dir\$(Platform)\$(Configuration)\base64_bio.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\blowfish\blowfish.dir\$(Platform)\$(Configuration)\blowfish.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\cast\cast.dir\$(Platform)\$(Configuration)\cast.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\cast\cast.dir\$(Platform)\$(Configuration)\cast_tables.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\cfb\cfb.dir\$(Platform)\$(Configuration)\cfb.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\des\des_decrepit.dir\$(Platform)\$(Configuration)\cfb64ede.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\dh\dh_decrepit.dir\$(Platform)\$(Configuration)\dh_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\dsa\dsa_decrepit.dir\$(Platform)\$(Configuration)\dsa_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\evp\evp_decrepit.dir\$(Platform)\$(Configuration)\dss1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\evp\evp_decrepit.dir\$(Platform)\$(Configuration)\evp_do_all.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\obj\obj_decrepit.dir\$(Platform)\$(Configuration)\obj_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\rc4\rc4_decrepit.dir\$(Platform)\$(Configuration)\rc4_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\ripemd\ripemd_decrepit.dir\$(Platform)\$(Configuration)\ripemd.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\rsa\rsa_decrepit.dir\$(Platform)\$(Configuration)\rsa_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\ssl\ssl_decrepit.dir\$(Platform)\$(Configuration)\ssl_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\x509\x509_decrepit.dir\$(Platform)\$(Configuration)\x509_decrepit.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\decrepit\xts\xts.dir\$(Platform)\$(Configuration)\xts.obj" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(SolutionDir)\ZERO_CHECK.vcxproj">
