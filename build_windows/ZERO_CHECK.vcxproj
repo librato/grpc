@@ -213,7 +213,7 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking Build System</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/work/projects/grpc/build_windows/grpc.sln
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file $(SolutionDir)/../build_windows/grpc.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -222,7 +222,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/work/projects/grpc/build_windows/grpc.sln
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file $(SolutionDir)/../build_windows/grpc.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -239,7 +239,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking Build System</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/work/projects/grpc/build_windows/grpc.sln
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file $(SolutionDir)/../build_windows/grpc.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -248,7 +248,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/work/projects/grpc/build_windows/grpc.sln
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file $(SolutionDir)/../build_windows/grpc.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -265,7 +265,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Checking Build System</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/work/projects/grpc/build_windows/grpc.sln
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file $(SolutionDir)/../build_windows/grpc.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -274,7 +274,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/work/projects/grpc/build_windows/grpc.sln
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file $(SolutionDir)/../build_windows/grpc.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -291,7 +291,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Checking Build System</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/work/projects/grpc/build_windows/grpc.sln
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file $(SolutionDir)/../build_windows/grpc.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -300,7 +300,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/work/projects/grpc/build_windows/grpc.sln
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file $(SolutionDir)/../build_windows/grpc.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

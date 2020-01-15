@@ -439,7 +439,7 @@ cd $(SolutionDir)\..\third_party\boringssl\crypto\err
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run err_data_generate.go &gt; C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/err_data.c
+C:\Go\bin\go.exe run err_data_generate.go &gt; $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/err_data.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -452,7 +452,7 @@ cd $(SolutionDir)\..\third_party\boringssl\crypto\err
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run err_data_generate.go &gt; C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/err_data.c
+C:\Go\bin\go.exe run err_data_generate.go &gt; $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/err_data.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -473,7 +473,7 @@ cd $(SolutionDir)\..\third_party\boringssl\crypto\err
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run err_data_generate.go &gt; C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/err_data.c
+C:\Go\bin\go.exe run err_data_generate.go &gt; $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/err_data.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -486,7 +486,7 @@ cd $(SolutionDir)\..\third_party\boringssl\crypto\err
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run err_data_generate.go &gt; C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/err_data.c
+C:\Go\bin\go.exe run err_data_generate.go &gt; $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/err_data.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -507,7 +507,7 @@ cd $(SolutionDir)\..\third_party\boringssl\crypto\err
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run err_data_generate.go &gt; C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/err_data.c
+C:\Go\bin\go.exe run err_data_generate.go &gt; $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/err_data.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -520,7 +520,7 @@ cd $(SolutionDir)\..\third_party\boringssl\crypto\err
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run err_data_generate.go &gt; C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/err_data.c
+C:\Go\bin\go.exe run err_data_generate.go &gt; $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/err_data.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -541,7 +541,7 @@ cd $(SolutionDir)\..\third_party\boringssl\crypto\err
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run err_data_generate.go &gt; C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/err_data.c
+C:\Go\bin\go.exe run err_data_generate.go &gt; $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/err_data.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -554,7 +554,7 @@ cd $(SolutionDir)\..\third_party\boringssl\crypto\err
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run err_data_generate.go &gt; C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/err_data.c
+C:\Go\bin\go.exe run err_data_generate.go &gt; $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/err_data.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -572,10 +572,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="$(SolutionDir)\..\third_party\boringssl\crypto\err\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/crypto/err/CMakeLists.txt</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/crypto/err/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/err/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/err/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -584,7 +584,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -598,10 +598,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\third_party\boringssl\crypto\err\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/crypto/err/CMakeLists.txt</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/crypto/err/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/err/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/err/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -610,7 +610,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -624,10 +624,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\third_party\boringssl\crypto\err\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/crypto/err/CMakeLists.txt</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/crypto/err/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/err/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/err/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -636,7 +636,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -650,10 +650,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)\third_party\boringssl\crypto\err\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/crypto/err/CMakeLists.txt</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/work/projects/grpc/third_party/boringssl/crypto/err/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/err/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/err/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -662,7 +662,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -BC:/work/projects/grpc/build_windows --check-stamp-file C:/work/projects/grpc/build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/err/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
