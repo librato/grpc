@@ -215,14 +215,21 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd $(SolutionDir)\..\
+
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
+
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run util/all_tests.go -build-dir $(SolutionDir)../build_windows
+
+echo C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
+C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
 if %errorlevel% neq 0 goto :cmEnd
-cd ssl/test/runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+
+echo cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
 if %errorlevel% neq 0 goto :cmEnd
+
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
@@ -230,14 +237,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-cd $(SolutionDir)\..\
+
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
+
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run util/all_tests.go -build-dir $(SolutionDir)../build_windows
+
+echo C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
+C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
 if %errorlevel% neq 0 goto :cmEnd
-cd ssl/test/runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+
+echo cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
 if %errorlevel% neq 0 goto :cmEnd
+
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
@@ -255,14 +269,21 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd $(SolutionDir)\..\
+
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
+
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run util/all_tests.go -build-dir $(SolutionDir)../build_windows
+
+echo C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
+C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
 if %errorlevel% neq 0 goto :cmEnd
-cd ssl/test/runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+
+echo cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
 if %errorlevel% neq 0 goto :cmEnd
+
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
@@ -270,14 +291,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-cd $(SolutionDir)\..\
+
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
+
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run util/all_tests.go -build-dir $(SolutionDir)../build_windows
+
+echo C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
+C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
 if %errorlevel% neq 0 goto :cmEnd
-cd ssl/test/runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+
+echo cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
 if %errorlevel% neq 0 goto :cmEnd
+
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
@@ -295,14 +323,21 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
       </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd $(SolutionDir)\..\
+
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
+
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run util/all_tests.go -build-dir $(SolutionDir)../build_windows
+
+echo C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
+C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
 if %errorlevel% neq 0 goto :cmEnd
-cd ssl/test/runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+
+echo cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
 if %errorlevel% neq 0 goto :cmEnd
+
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
@@ -310,14 +345,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-cd $(SolutionDir)\..\
+
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
+
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run util/all_tests.go -build-dir $(SolutionDir)../build_windows
+
+echo C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
+C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
 if %errorlevel% neq 0 goto :cmEnd
-cd ssl/test/runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+
+echo cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
 if %errorlevel% neq 0 goto :cmEnd
+
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
@@ -335,14 +377,21 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
       </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd $(SolutionDir)\..\
+
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
+
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run util/all_tests.go -build-dir $(SolutionDir)../build_windows
+
+echo C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
+C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
 if %errorlevel% neq 0 goto :cmEnd
-cd ssl/test/runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+
+echo cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
 if %errorlevel% neq 0 goto :cmEnd
+
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
@@ -350,14 +399,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-cd $(SolutionDir)\..\
+
+cd $(SolutionDir)..\
 if %errorlevel% neq 0 goto :cmEnd
+
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Go\bin\go.exe run util/all_tests.go -build-dir $(SolutionDir)../build_windows
+
+echo C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
+C:\Go\bin\go.exe run $(SolutionDir)..\unit\all_test.go -build-dir $(SolutionDir)
 if %errorlevel% neq 0 goto :cmEnd
-cd ssl/test/runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+
+echo cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
+cd $(SolutionDir)..\third_party\boringssl\ssl\test\runner &amp;&amp; C:/Go/bin/go.exe test -shim-path $(SolutionDir)$(Platform)\$(Configuration)\third_party\bssl_shim.exe
 if %errorlevel% neq 0 goto :cmEnd
+
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
