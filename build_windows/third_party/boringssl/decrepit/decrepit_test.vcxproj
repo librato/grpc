@@ -186,7 +186,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>decrepit.lib;ssl.lib;crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -233,7 +233,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>decrepit.lib;ssl.lib;crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -280,7 +280,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>decrepit.lib;ssl.lib;crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -327,7 +327,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>decrepit.lib;ssl.lib;crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -374,7 +374,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>decrepit.lib;ssl.lib;crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -421,7 +421,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>decrepit.lib;ssl.lib;crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -467,7 +467,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>decrepit.lib;ssl.lib;crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -513,7 +513,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>decrepit.lib;ssl.lib;crypto.lib;boringssl_gtest.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -637,10 +637,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\decrepit\ripemd\ripemd_test.cc" />
     <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\decrepit\cfb\cfb_test.cc" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\boringssl_gtest_main.dir\$(Configuration)\gtest_main.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\file_test.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\malloc.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\test_util.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\boringssl_gtest_main.dir\$(Platform)\$(Configuration)\gtest_main.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\file_test.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\malloc.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\test_util.obj" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(SolutionDir)\ZERO_CHECK.vcxproj">
