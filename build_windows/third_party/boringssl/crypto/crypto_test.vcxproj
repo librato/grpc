@@ -682,11 +682,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509\x509_test.cc" />
     <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\tab_test.cc" />
     <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3name_test.cc" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto_test_data.dir\$(Configuration)\crypto_test_data.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\boringssl_gtest_main.dir\$(Configuration)\gtest_main.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\file_test.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\malloc.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\test_util.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto_test_data.dir\$(Platform)\$(Configuration)\crypto_test_data.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\boringssl_gtest_main.dir\$(Platform)\$(Configuration)\gtest_main.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\file_test.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\malloc.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\test_util.obj" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(SolutionDir)\ZERO_CHECK.vcxproj">

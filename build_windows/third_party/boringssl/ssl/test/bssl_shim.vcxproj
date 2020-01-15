@@ -639,9 +639,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\test\bssl_shim.cc" />
     <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\test\packeted_bio.cc" />
     <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\test\test_config.cc" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\file_test.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\malloc.obj" />
-    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\test_util.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\file_test.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\malloc.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\test_util.obj" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(SolutionDir)\ZERO_CHECK.vcxproj">

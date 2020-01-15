@@ -228,8 +228,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\Debug\gen_hpack_tables.exe;$(SolutionDir)\Debug\gen_legal_metadata_characters.exe;$(SolutionDir)\Debug\gen_percent_encoding_tables.exe;%(AdditionalInputs)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\Debug\gen_hpack_tables.exe;$(SolutionDir)\Debug\gen_legal_metadata_characters.exe;$(SolutionDir)\Debug\gen_percent_encoding_tables.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_hpack_tables.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_legal_metadata_characters.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_percent_encoding_tables.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_hpack_tables.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_legal_metadata_characters.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_percent_encoding_tables.exe</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\CMakeFiles\tools_cxx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\CMakeFiles\tools_cxx</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
@@ -252,8 +252,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\Release\gen_hpack_tables.exe;$(SolutionDir)\Release\gen_legal_metadata_characters.exe;$(SolutionDir)\Release\gen_percent_encoding_tables.exe;%(AdditionalInputs)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\Release\gen_hpack_tables.exe;$(SolutionDir)\Release\gen_legal_metadata_characters.exe;$(SolutionDir)\Release\gen_percent_encoding_tables.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_hpack_tables.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_legal_metadata_characters.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_percent_encoding_tables.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_hpack_tables.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_legal_metadata_characters.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_percent_encoding_tables.exe</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\CMakeFiles\tools_cxx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\CMakeFiles\tools_cxx</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
@@ -276,8 +276,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)\MinSizeRel\gen_hpack_tables.exe;$(SolutionDir)\MinSizeRel\gen_legal_metadata_characters.exe;$(SolutionDir)\MinSizeRel\gen_percent_encoding_tables.exe;%(AdditionalInputs)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)\MinSizeRel\gen_hpack_tables.exe;$(SolutionDir)\MinSizeRel\gen_legal_metadata_characters.exe;$(SolutionDir)\MinSizeRel\gen_percent_encoding_tables.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_hpack_tables.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_legal_metadata_characters.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_percent_encoding_tables.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_hpack_tables.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_legal_metadata_characters.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_percent_encoding_tables.exe</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)\CMakeFiles\tools_cxx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)\CMakeFiles\tools_cxx</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
@@ -300,8 +300,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)\RelWithDebInfo\gen_hpack_tables.exe;$(SolutionDir)\RelWithDebInfo\gen_legal_metadata_characters.exe;$(SolutionDir)\RelWithDebInfo\gen_percent_encoding_tables.exe;%(AdditionalInputs)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(SolutionDir)\RelWithDebInfo\gen_hpack_tables.exe;$(SolutionDir)\RelWithDebInfo\gen_legal_metadata_characters.exe;$(SolutionDir)\RelWithDebInfo\gen_percent_encoding_tables.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_hpack_tables.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_legal_metadata_characters.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_percent_encoding_tables.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_hpack_tables.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_legal_metadata_characters.exe;$(SolutionDir)\$(Platform)\$(Configuration)\third_party\gen_percent_encoding_tables.exe</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)\CMakeFiles\tools_cxx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(SolutionDir)\CMakeFiles\tools_cxx</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
