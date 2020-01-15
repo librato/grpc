@@ -1,29 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\work\projects\grpc\build_windows\gens\src\proto\grpc\status\status.pb.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\build_windows\gens\src\proto\grpc\status\status.grpc.pb.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\src\cpp\util\error_details.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\gens\src\proto\grpc\status\status.pb.cc" />
+    <ClCompile Include="$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.cc" />
+    <ClCompile Include="$(SolutionDir)\..\src\cpp\util\error_details.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\work\projects\grpc\build_windows\gens\src\proto\grpc\status\status.pb.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\work\projects\grpc\build_windows\gens\src\proto\grpc\status\status.grpc.pb.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="$(SolutionDir)\gens\src\proto\grpc\status\status.pb.h" />
+    <ClInclude Include="$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.h" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\work\projects\grpc\build_windows\CMakeFiles\ca5d3753f7b5fd97197b651e72e687ef\status.grpc.pb.cc.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="C:\work\projects\grpc\CMakeLists.txt" />
+    <CustomBuild Include="$(SolutionDir)\CMakeFiles\ca5d3753f7b5fd97197b651e72e687ef\status.grpc.pb.cc.rule" />
+    <CustomBuild Include="$(SolutionDir)\..\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
