@@ -228,8 +228,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\Debug\check_epollexclusive.exe;$(SolutionDir)\Debug\grpc_create_jwt.exe;$(SolutionDir)\Debug\grpc_print_google_default_creds_token.exe;$(SolutionDir)\Debug\grpc_verify_jwt.exe;%(AdditionalInputs)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\Debug\check_epollexclusive.exe;$(SolutionDir)\Debug\grpc_create_jwt.exe;$(SolutionDir)\Debug\grpc_print_google_default_creds_token.exe;$(SolutionDir)\Debug\grpc_verify_jwt.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\check_epollexclusive.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_create_jwt.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_print_google_default_creds_token.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_verify_jwt.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\check_epollexclusive.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_create_jwt.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_print_google_default_creds_token.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_verify_jwt.exe</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\CMakeFiles\tools_c</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\CMakeFiles\tools_c</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
@@ -252,8 +252,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\Release\check_epollexclusive.exe;$(SolutionDir)\Release\grpc_create_jwt.exe;$(SolutionDir)\Release\grpc_print_google_default_creds_token.exe;$(SolutionDir)\Release\grpc_verify_jwt.exe;%(AdditionalInputs)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\Release\check_epollexclusive.exe;$(SolutionDir)\Release\grpc_create_jwt.exe;$(SolutionDir)\Release\grpc_print_google_default_creds_token.exe;$(SolutionDir)\Release\grpc_verify_jwt.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\check_epollexclusive.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_create_jwt.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_print_google_default_creds_token.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_verify_jwt.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\check_epollexclusive.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_create_jwt.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_print_google_default_creds_token.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_verify_jwt.exe</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\CMakeFiles\tools_c</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\CMakeFiles\tools_c</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
@@ -276,8 +276,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)\MinSizeRel\check_epollexclusive.exe;$(SolutionDir)\MinSizeRel\grpc_create_jwt.exe;$(SolutionDir)\MinSizeRel\grpc_print_google_default_creds_token.exe;$(SolutionDir)\MinSizeRel\grpc_verify_jwt.exe;%(AdditionalInputs)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)\MinSizeRel\check_epollexclusive.exe;$(SolutionDir)\MinSizeRel\grpc_create_jwt.exe;$(SolutionDir)\MinSizeRel\grpc_print_google_default_creds_token.exe;$(SolutionDir)\MinSizeRel\grpc_verify_jwt.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\check_epollexclusive.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_create_jwt.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_print_google_default_creds_token.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_verify_jwt.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\check_epollexclusive.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_create_jwt.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_print_google_default_creds_token.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_verify_jwt.exe</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)\CMakeFiles\tools_c</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)\CMakeFiles\tools_c</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
@@ -300,8 +300,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)\RelWithDebInfo\check_epollexclusive.exe;$(SolutionDir)\RelWithDebInfo\grpc_create_jwt.exe;$(SolutionDir)\RelWithDebInfo\grpc_print_google_default_creds_token.exe;$(SolutionDir)\RelWithDebInfo\grpc_verify_jwt.exe;%(AdditionalInputs)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(SolutionDir)\RelWithDebInfo\check_epollexclusive.exe;$(SolutionDir)\RelWithDebInfo\grpc_create_jwt.exe;$(SolutionDir)\RelWithDebInfo\grpc_print_google_default_creds_token.exe;$(SolutionDir)\RelWithDebInfo\grpc_verify_jwt.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\check_epollexclusive.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_create_jwt.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_print_google_default_creds_token.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_verify_jwt.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\check_epollexclusive.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_create_jwt.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_print_google_default_creds_token.exe;$(SolutionDir)$(Platform)\$(Configuration)\grpc_verify_jwt.exe</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)\CMakeFiles\tools_c</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(SolutionDir)\CMakeFiles\tools_c</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>

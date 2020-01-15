@@ -274,7 +274,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstaticd.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstatic.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -319,7 +319,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstaticd.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstatic.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -364,7 +364,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstaticd.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstatic.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -409,7 +409,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstaticd.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstatic.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -453,7 +453,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstaticd.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstatic.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -497,7 +497,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstaticd.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>grpc.lib;gpr.lib;ssl.lib;crypto.lib;zlibstatic.lib;cares.lib;address_sorting.lib;wsock32.lib;ws2_32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\third_party;$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
