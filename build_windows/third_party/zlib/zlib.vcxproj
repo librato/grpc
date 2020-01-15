@@ -234,7 +234,7 @@
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(SolutionDir)/../build_windows/third_party/zlib/Debug/zlibd.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)$(Platform)\$(Configuration)\third_party\zlibd.lib</ImportLibrary>
       <ProgramDataBaseFile>$(SolutionDir)/../build_windows/third_party/zlib/Debug/zlibd.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -324,7 +324,7 @@
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(SolutionDir)/../build_windows/third_party/zlib/Release/zlib.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)$(Platform)\$(Configuration)\third_party\zlib.lib</ImportLibrary>
       <ProgramDataBaseFile>$(SolutionDir)/../build_windows/third_party/zlib/Release/zlib.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -414,7 +414,7 @@
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(SolutionDir)/../build_windows/third_party/zlib/MinSizeRel/zlib.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)$(Platform)\$(Configuration)\third_party\zlib.lib</ImportLibrary>
       <ProgramDataBaseFile>$(SolutionDir)/../build_windows/third_party/zlib/MinSizeRel/zlib.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -502,7 +502,7 @@
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(SolutionDir)/../build_windows/third_party/zlib/RelWithDebInfo/zlib.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)$(Platform)\$(Configuration)\third_party\zlib.lib</ImportLibrary>
       <ProgramDataBaseFile>$(SolutionDir)/../build_windows/third_party/zlib/RelWithDebInfo/zlib.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
