@@ -6,15 +6,45 @@ if(NOT DEFINED CMAKE_INSTALL_PREFIX)
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
-# Set the install configuration name.
-if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
-  if(BUILD_TYPE)
+# Set the install configuration.
+if(NOT DEFINED CMAKE_INSTALL_CONFIGURATION)
+  if(BUILD_CONFIGURATION)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
-           CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
+           CMAKE_INSTALL_CONFIGURATION "${BUILD_CONFIGURATION}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIGURATION "Release")
   endif()
-  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIGURATION}\"")
+endif()
+
+# Set the install platform.
+if(NOT DEFINED CMAKE_INSTALL_PLATFORM)
+  if(BUILD_PLATFORM)
+    string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+           CMAKE_INSTALL_PLATFORM "${BUILD_PLATFORM}")
+  else()
+    set(CMAKE_INSTALL_PLATFORM "x64")
+  endif()
+  message(STATUS "Install platform: \"${CMAKE_INSTALL_PLATFORM}\"")
+endif()
+
+# Set the install solution directory.
+if(NOT DEFINED CMAKE_INSTALL_SOLUTION_DIR)
+  if(BUILD_SOLUTION_DIR)
+    string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+           CMAKE_INSTALL_SOLUTION_DIR_TEMP "${BUILD_SOLUTION_DIR}")
+    string(REGEX REPLACE "\\\\" "/"
+           CMAKE_INSTALL_SOLUTION_DIR "${CMAKE_INSTALL_SOLUTION_DIR_TEMP}")
+  else()
+    set(CMAKE_INSTALL_SOLUTION_DIR "not-defined")
+  endif()
+  message(STATUS "Install solution directory: \"${CMAKE_INSTALL_SOLUTION_DIR}\"")
+endif()
+
+if(NOT DEFINED CMAKE_INSTALL_THIRD_PARTY_DIR)
+  string(REGEX REPLACE "\\\\" "/"
+     CMAKE_INSTALL_THIRD_PARTY_DIR "${CMAKE_INSTALL_SOLUTION_DIR}/${CMAKE_INSTALL_PLATFORM}/${CMAKE_INSTALL_CONFIGURATION}/third_party")
+  message(STATUS "Install third-party directory: \"${CMAKE_INSTALL_THIRD_PARTY_DIR}\"")
 endif()
 
 # Set the component getting installed.
@@ -33,2629 +63,2629 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/alloc.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/alloc.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm_gcc_atomic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm_gcc_atomic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm_gcc_sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm_gcc_sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/cpu.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/cpu.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/log.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/log.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/log_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/log_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/port_platform.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/port_platform.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/string_util.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/string_util.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_custom.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_custom.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_generic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_generic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/thd_id.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/thd_id.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_atomic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_atomic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/fork.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/fork.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/log.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/log.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/port_platform.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/port_platform.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_custom.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_custom.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_generic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_generic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/byte_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/byte_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/compression_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/compression_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/connectivity_state.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/connectivity_state.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/grpc_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/grpc_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/propagation_bits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/propagation_bits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_atomic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_atomic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/fork.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/fork.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/log.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/log.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/port_platform.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/port_platform.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_custom.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_custom.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_generic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_generic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_security.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_security.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/byte_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/byte_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/compression.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/compression.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/fork.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/fork.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_security_constants.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_security_constants.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/load_reporting.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/load_reporting.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/slice_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/slice_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/workaround_list.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/workaround_list.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/census.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/census.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/byte_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/byte_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/compression_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/compression_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/connectivity_state.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/connectivity_state.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/grpc_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/grpc_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/propagation_bits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/propagation_bits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_atomic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_atomic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/fork.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/fork.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/log.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/log.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/port_platform.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/port_platform.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_custom.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_custom.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_generic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_generic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_cronet.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_cronet.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_security.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_security.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_security_constants.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_security_constants.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/byte_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/byte_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/compression_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/compression_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/connectivity_state.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/connectivity_state.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/grpc_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/grpc_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/propagation_bits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/propagation_bits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_atomic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_atomic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/fork.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/fork.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/log.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/log.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/port_platform.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/port_platform.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_custom.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_custom.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_generic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_generic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/byte_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/byte_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/compression.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/compression.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/fork.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/fork.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_security_constants.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_security_constants.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/load_reporting.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/load_reporting.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/slice_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/slice_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/workaround_list.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/workaround_list.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/census.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/census.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/alarm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/alarm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/client_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/client_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/completion_queue.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/completion_queue.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/create_channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/create_channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/create_channel_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/create_channel_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/ext" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/ext/health_check_service_server_builder_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/ext" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/ext/health_check_service_server_builder_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/generic" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/generic/async_generic_service.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/generic" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/generic/async_generic_service.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/generic" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/generic/generic_stub.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/generic" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/generic/generic_stub.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/grpc++.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/grpc++.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/health_check_service_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/health_check_service_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/channel_argument_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/channel_argument_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/client_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/client_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/core_codegen.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/core_codegen.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/grpc_library.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/grpc_library.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/method_handler_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/method_handler_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/rpc_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/rpc_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/rpc_service_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/rpc_service_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/serialization_traits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/serialization_traits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/server_builder_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/server_builder_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/server_builder_plugin.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/server_builder_plugin.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/server_initializer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/server_initializer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/service_type.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/service_type.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/resource_quota.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/resource_quota.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/security/auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/security/auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/security/auth_metadata_processor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/security/auth_metadata_processor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/security/credentials.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/security/credentials.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/security/server_credentials.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/security/server_credentials.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/server.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/server.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/server_builder.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/server_builder.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/server_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/server_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/server_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/server_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/async_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/async_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/async_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/async_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/channel_arguments.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/channel_arguments.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/config.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/status_code_enum.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/status_code_enum.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/string_ref.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/string_ref.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/stub_options.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/stub_options.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/sync_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/sync_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/alarm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/alarm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/alarm_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/alarm_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/channel_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/channel_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/client_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/client_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/completion_queue.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/completion_queue.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/completion_queue_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/completion_queue_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/create_channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/create_channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/create_channel_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/create_channel_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/create_channel_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/create_channel_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/create_channel_posix_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/create_channel_posix_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/ext/health_check_service_server_builder_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/ext/health_check_service_server_builder_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/generic/async_generic_service.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/generic/async_generic_service.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/generic/generic_stub.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/generic/generic_stub.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/generic/generic_stub_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/generic/generic_stub_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/grpcpp.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/grpcpp.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/health_check_service_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/health_check_service_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/health_check_service_interface_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/health_check_service_interface_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/channel_argument_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/channel_argument_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/client_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/client_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/core_codegen.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/core_codegen.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/grpc_library.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/grpc_library.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/method_handler_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/method_handler_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/rpc_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/rpc_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/rpc_service_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/rpc_service_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/serialization_traits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/serialization_traits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/server_builder_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/server_builder_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/server_builder_option_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/server_builder_option_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/server_builder_plugin.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/server_builder_plugin.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/server_initializer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/server_initializer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/server_initializer_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/server_initializer_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/service_type.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/service_type.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/resource_quota.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/resource_quota.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/resource_quota_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/resource_quota_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/auth_metadata_processor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/auth_metadata_processor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/auth_metadata_processor_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/auth_metadata_processor_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/credentials.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/credentials.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/credentials_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/credentials_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/server_credentials.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/server_credentials.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/server_credentials_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/server_credentials_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_builder.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_builder.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_builder_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_builder_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_posix_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_posix_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/async_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/async_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/async_stream_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/async_stream_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/async_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/async_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/async_unary_call_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/async_unary_call_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/channel_arguments.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/channel_arguments.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/channel_arguments_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/channel_arguments_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/client_callback.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/client_callback.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/client_callback_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/client_callback_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/client_interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/client_interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/config.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/message_allocator.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/message_allocator.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/proto_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/proto_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/proto_buffer_writer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/proto_buffer_writer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/server_callback.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/server_callback.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/server_callback_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/server_callback_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/server_interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/server_interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/status_code_enum.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/status_code_enum.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/string_ref.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/string_ref.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/stub_options.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/stub_options.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/sync_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/sync_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/sync_stream_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/sync_stream_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/validate_service_config.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/validate_service_config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/alloc.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/alloc.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm_gcc_atomic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm_gcc_atomic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm_gcc_sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm_gcc_sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/cpu.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/cpu.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/log.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/log.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/log_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/log_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/port_platform.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/port_platform.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/string_util.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/string_util.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_custom.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_custom.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_generic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_generic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/thd_id.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/thd_id.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_atomic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_atomic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/fork.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/fork.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/log.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/log.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/port_platform.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/port_platform.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_custom.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_custom.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_generic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_generic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/byte_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/byte_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/compression.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/compression.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/fork.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/fork.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_security_constants.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_security_constants.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/load_reporting.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/load_reporting.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/slice_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/slice_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/workaround_list.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/workaround_list.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/byte_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/byte_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/compression_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/compression_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/connectivity_state.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/connectivity_state.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/grpc_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/grpc_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/propagation_bits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/propagation_bits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/async_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/async_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/async_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/async_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/call_hook.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/call_hook.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/channel_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/channel_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/client_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/client_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/client_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/client_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/completion_queue.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/completion_queue.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/completion_queue_tag.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/completion_queue_tag.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/config.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/core_codegen_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/core_codegen_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/create_auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/create_auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/grpc_library.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/grpc_library.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/metadata_map.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/metadata_map.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/method_handler_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/method_handler_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/rpc_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/rpc_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/rpc_service_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/rpc_service_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/security/auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/security/auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/serialization_traits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/serialization_traits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/server_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/server_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/server_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/server_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/service_type.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/service_type.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/status_code_enum.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/status_code_enum.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/string_ref.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/string_ref.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/stub_options.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/stub_options.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/sync_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/sync_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/async_generic_service.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/async_generic_service.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/async_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/async_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/async_stream_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/async_stream_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/async_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/async_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/async_unary_call_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/async_unary_call_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/call_hook.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/call_hook.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/call_op_set.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/call_op_set.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/call_op_set_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/call_op_set_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/callback_common.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/callback_common.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/channel_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/channel_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_callback.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_callback.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_callback_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_callback_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_context_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_context_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/completion_queue.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/completion_queue.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/completion_queue_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/completion_queue_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/completion_queue_tag.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/completion_queue_tag.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/config.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/core_codegen_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/core_codegen_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/create_auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/create_auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/delegating_channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/delegating_channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/grpc_library.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/grpc_library.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/intercepted_channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/intercepted_channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/interceptor_common.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/interceptor_common.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/message_allocator.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/message_allocator.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/metadata_map.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/metadata_map.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/method_handler_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/method_handler_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/rpc_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/rpc_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/rpc_service_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/rpc_service_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/security/auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/security/auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/serialization_traits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/serialization_traits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_callback.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_callback.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_callback_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_callback_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_context_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_context_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/service_type.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/service_type.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/status_code_enum.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/status_code_enum.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/string_ref.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/string_ref.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/stub_options.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/stub_options.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/sync_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/sync_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/sync_stream_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/sync_stream_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/proto_utils.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/proto_utils.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/proto_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/proto_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/proto_buffer_writer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/proto_buffer_writer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/proto_utils.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/proto_utils.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/config_protobuf.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/config_protobuf.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/config_protobuf.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/config_protobuf.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/error_details.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/error_details.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/error_details.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/error_details.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/error_details_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/error_details_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/ext" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/ext/proto_server_reflection_plugin.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/ext" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/ext/proto_server_reflection_plugin.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/ext/proto_server_reflection_plugin.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/ext/proto_server_reflection_plugin.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/ext/proto_server_reflection_plugin_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/ext/proto_server_reflection_plugin_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/alarm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/alarm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/client_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/client_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/completion_queue.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/completion_queue.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/create_channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/create_channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/create_channel_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/create_channel_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/ext" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/ext/health_check_service_server_builder_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/ext" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/ext/health_check_service_server_builder_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/generic" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/generic/async_generic_service.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/generic" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/generic/async_generic_service.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/generic" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/generic/generic_stub.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/generic" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/generic/generic_stub.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/grpc++.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/grpc++.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/health_check_service_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/health_check_service_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/channel_argument_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/channel_argument_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/client_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/client_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/core_codegen.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/core_codegen.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/grpc_library.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/grpc_library.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/method_handler_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/method_handler_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/rpc_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/rpc_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/rpc_service_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/rpc_service_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/serialization_traits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/serialization_traits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/server_builder_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/server_builder_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/server_builder_plugin.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/server_builder_plugin.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/server_initializer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/server_initializer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/service_type.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/service_type.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/resource_quota.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/resource_quota.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/security/auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/security/auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/security/auth_metadata_processor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/security/auth_metadata_processor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/security/credentials.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/security/credentials.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/security/server_credentials.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/security/server_credentials.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/server.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/server.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/server_builder.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/server_builder.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/server_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/server_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/server_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/server_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/async_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/async_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/async_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/async_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/channel_arguments.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/channel_arguments.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/config.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/status_code_enum.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/status_code_enum.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/string_ref.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/string_ref.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/stub_options.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/stub_options.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/sync_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/sync_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/support/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/support/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/alarm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/alarm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/alarm_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/alarm_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/channel_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/channel_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/client_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/client_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/completion_queue.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/completion_queue.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/completion_queue_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/completion_queue_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/create_channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/create_channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/create_channel_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/create_channel_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/create_channel_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/create_channel_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/create_channel_posix_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/create_channel_posix_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/ext/health_check_service_server_builder_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/ext/health_check_service_server_builder_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/generic/async_generic_service.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/generic/async_generic_service.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/generic/generic_stub.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/generic/generic_stub.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/generic/generic_stub_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/generic" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/generic/generic_stub_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/grpcpp.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/grpcpp.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/health_check_service_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/health_check_service_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/health_check_service_interface_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/health_check_service_interface_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/channel_argument_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/channel_argument_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/client_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/client_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/core_codegen.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/core_codegen.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/grpc_library.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/grpc_library.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/method_handler_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/method_handler_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/rpc_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/rpc_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/rpc_service_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/rpc_service_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/serialization_traits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/serialization_traits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/server_builder_option.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/server_builder_option.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/server_builder_option_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/server_builder_option_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/server_builder_plugin.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/server_builder_plugin.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/server_initializer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/server_initializer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/server_initializer_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/server_initializer_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/service_type.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/service_type.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/resource_quota.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/resource_quota.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/resource_quota_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/resource_quota_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/auth_metadata_processor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/auth_metadata_processor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/auth_metadata_processor_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/auth_metadata_processor_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/credentials.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/credentials.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/credentials_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/credentials_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/server_credentials.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/server_credentials.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/security/server_credentials_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/security/server_credentials_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_builder.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_builder.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_builder_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_builder_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/server_posix_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/server_posix_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/async_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/async_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/async_stream_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/async_stream_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/async_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/async_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/async_unary_call_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/async_unary_call_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/channel_arguments.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/channel_arguments.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/channel_arguments_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/channel_arguments_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/client_callback.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/client_callback.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/client_callback_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/client_callback_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/client_interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/client_interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/config.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/message_allocator.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/message_allocator.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/proto_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/proto_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/proto_buffer_writer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/proto_buffer_writer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/server_callback.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/server_callback.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/server_callback_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/server_callback_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/server_interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/server_interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/status_code_enum.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/status_code_enum.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/string_ref.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/string_ref.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/stub_options.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/stub_options.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/sync_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/sync_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/sync_stream_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/sync_stream_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/support/validate_service_config.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/support/validate_service_config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/alloc.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/alloc.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm_gcc_atomic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm_gcc_atomic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm_gcc_sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm_gcc_sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/atm_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/atm_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/cpu.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/cpu.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/log.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/log.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/log_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/log_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/port_platform.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/port_platform.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/string_util.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/string_util.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_custom.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_custom.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_generic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_generic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/sync_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/sync_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/thd_id.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/thd_id.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_atomic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_atomic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_gcc_sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_gcc_sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/atm_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/atm_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/fork.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/fork.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/gpr_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/gpr_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/log.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/log.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/port_platform.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/port_platform.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_custom.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_custom.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_generic.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_generic.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/sync_windows.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/sync_windows.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/byte_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/byte_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/compression.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/compression.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/fork.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/fork.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_posix.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_posix.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/grpc_security_constants.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/grpc_security_constants.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/load_reporting.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/load_reporting.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/slice_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/slice_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/support/workaround_list.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/support" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/support/workaround_list.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/byte_buffer_reader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/byte_buffer_reader.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/compression_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/compression_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/connectivity_state.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/connectivity_state.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/grpc_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/grpc_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/propagation_bits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/propagation_bits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc/impl/codegen/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc/impl/codegen/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/async_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/async_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/async_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/async_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/call_hook.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/call_hook.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/channel_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/channel_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/client_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/client_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/client_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/client_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/completion_queue.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/completion_queue.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/completion_queue_tag.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/completion_queue_tag.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/config.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/core_codegen_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/core_codegen_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/create_auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/create_auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/grpc_library.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/grpc_library.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/metadata_map.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/metadata_map.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/method_handler_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/method_handler_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/rpc_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/rpc_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/rpc_service_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/rpc_service_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/security/auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/security/auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/serialization_traits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/serialization_traits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/server_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/server_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/server_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/server_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/service_type.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/service_type.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/status_code_enum.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/status_code_enum.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/string_ref.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/string_ref.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/stub_options.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/stub_options.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/sync_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/sync_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/async_generic_service.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/async_generic_service.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/async_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/async_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/async_stream_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/async_stream_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/async_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/async_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/async_unary_call_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/async_unary_call_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/byte_buffer.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/byte_buffer.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/call_hook.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/call_hook.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/call_op_set.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/call_op_set.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/call_op_set_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/call_op_set_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/callback_common.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/callback_common.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/channel_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/channel_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_callback.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_callback.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_callback_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_callback_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_context_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_context_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/client_unary_call.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/client_unary_call.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/completion_queue.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/completion_queue.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/completion_queue_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/completion_queue_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/completion_queue_tag.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/completion_queue_tag.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/config.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/core_codegen_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/core_codegen_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/create_auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/create_auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/delegating_channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/delegating_channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/grpc_library.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/grpc_library.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/intercepted_channel.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/intercepted_channel.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/interceptor_common.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/interceptor_common.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/message_allocator.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/message_allocator.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/metadata_map.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/metadata_map.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/method_handler_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/method_handler_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/rpc_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/rpc_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/rpc_service_method.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/rpc_service_method.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen/security" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/security/auth_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen/security" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/security/auth_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/serialization_traits.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/serialization_traits.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_callback.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_callback.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_callback_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_callback_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_context.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_context.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_context_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_context_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_interceptor.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_interceptor.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/server_interface.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/server_interface.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/service_type.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/service_type.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/slice.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/slice.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/status.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/status.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/status_code_enum.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/status_code_enum.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/string_ref.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/string_ref.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/stub_options.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/stub_options.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/sync_stream.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/sync_stream.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/sync_stream_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/sync_stream_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/time.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/time.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/sync.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/sync.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpc++/impl/codegen/config_protobuf.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpc++/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpc++/impl/codegen/config_protobuf.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/impl/codegen/config_protobuf.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/impl/codegen" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/impl/codegen/config_protobuf.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/ext/channelz_service_plugin.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/ext/channelz_service_plugin.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "C:/work/projects/grpc/include/grpcpp/ext/channelz_service_plugin_impl.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/grpcpp/ext" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../include/grpcpp/ext/channelz_service_plugin_impl.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/grpc" TYPE FILE FILES "C:/work/projects/grpc/build_windows/gRPCConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/gRPCConfig.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/grpc" TYPE FILE FILES "C:/work/projects/grpc/build_windows/gRPCConfigVersion.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/gRPCConfigVersion.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpc" TYPE FILE FILES "C:/work/projects/grpc/etc/roots.pem")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpc" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../etc/roots.pem")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/work/projects/grpc/build_windows/third_party/benchmark/cmake_install.cmake")
-  include("C:/work/projects/grpc/build_windows/third_party/cares/cares/cmake_install.cmake")
-  include("C:/work/projects/grpc/build_windows/third_party/gflags/cmake_install.cmake")
-  include("C:/work/projects/grpc/build_windows/third_party/protobuf/cmake_install.cmake")
-  include("C:/work/projects/grpc/build_windows/third_party/boringssl/cmake_install.cmake")
-  include("C:/work/projects/grpc/build_windows/third_party/zlib/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/benchmark/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/cares/cares/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/gflags/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/protobuf/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/boringssl/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/zlib/cmake_install.cmake")
 
 endif()
 
@@ -2667,5 +2697,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/work/projects/grpc/build_windows/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

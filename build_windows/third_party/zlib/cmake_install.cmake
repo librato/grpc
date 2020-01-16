@@ -7,14 +7,14 @@ endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
 # Set the install configuration name.
-if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+if(NOT DEFINED CMAKE_INSTALL_CONFIGURATION)
   if(BUILD_TYPE)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
-           CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
+           CMAKE_INSTALL_CONFIGURATION "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIGURATION "Release")
   endif()
-  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIGURATION}\"")
 endif()
 
 # Set the component getting installed.
@@ -33,7 +33,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+  if("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/lib/zlibd.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -42,8 +42,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/work/projects/grpc/build_windows/third_party/zlib/Debug/zlibd.lib")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlibd.lib")
+  elseif("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/lib/zlib.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -52,8 +52,8 @@ file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY O
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/work/projects/grpc/build_windows/third_party/zlib/Release/zlib.lib")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlib.lib")
+  elseif("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/lib/zlib.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -62,8 +62,8 @@ file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY O
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/work/projects/grpc/build_windows/third_party/zlib/MinSizeRel/zlib.lib")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlib.lib")
+  elseif("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/lib/zlib.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -72,12 +72,12 @@ file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY O
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/work/projects/grpc/build_windows/third_party/zlib/RelWithDebInfo/zlib.lib")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlib.lib")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+  if("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/bin/zlibd.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -86,8 +86,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY FILES "C:/work/projects/grpc/build_windows/third_party/zlib/Debug/zlibd.dll")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlibd.dll")
+  elseif("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/bin/zlib.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -96,8 +96,8 @@ file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY F
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY FILES "C:/work/projects/grpc/build_windows/third_party/zlib/Release/zlib.dll")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlib.dll")
+  elseif("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/bin/zlib.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -106,8 +106,8 @@ file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY F
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY FILES "C:/work/projects/grpc/build_windows/third_party/zlib/MinSizeRel/zlib.dll")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlib.dll")
+  elseif("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/bin/zlib.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -116,12 +116,12 @@ file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY F
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY FILES "C:/work/projects/grpc/build_windows/third_party/zlib/RelWithDebInfo/zlib.dll")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/bin" TYPE SHARED_LIBRARY FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlib.dll")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+  if("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/lib/zlibstaticd.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -130,8 +130,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY FILES "C:/work/projects/grpc/build_windows/third_party/zlib/Debug/zlibstaticd.lib")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlibstaticd.lib")
+  elseif("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/lib/zlibstatic.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -140,8 +140,8 @@ file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY F
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY FILES "C:/work/projects/grpc/build_windows/third_party/zlib/Release/zlibstatic.lib")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlibstatic.lib")
+  elseif("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/lib/zlibstatic.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -150,8 +150,8 @@ file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY F
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY FILES "C:/work/projects/grpc/build_windows/third_party/zlib/MinSizeRel/zlibstatic.lib")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}l/zlibstatic.lib")
+  elseif("${CMAKE_INSTALL_CONFIGURATION}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
      "C:/Program Files (x86)/grpc/lib/zlibstatic.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -160,7 +160,7 @@ file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY F
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY FILES "C:/work/projects/grpc/build_windows/third_party/zlib/RelWithDebInfo/zlibstatic.lib")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/lib" TYPE STATIC_LIBRARY FILES "${CMAKE_INSTALL_THIRD_PARTY_DIR}/zlibstatic.lib")
   endif()
 endif()
 
@@ -188,7 +188,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/share/man/man3" TYPE FILE FILES "C:/work/projects/grpc/third_party/zlib/zlib.3")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/share/man/man3" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}../third_party/zlib/zlib.3")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -200,6 +200,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/share/pkgconfig" TYPE FILE FILES "C:/work/projects/grpc/build_windows/third_party/zlib/zlib.pc")
+file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/share/pkgconfig" TYPE FILE FILES "${CMAKE_INSTALL_SOLUTION_DIR}/third_party/zlib/zlib.pc")
 endif()
 
