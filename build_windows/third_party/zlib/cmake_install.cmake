@@ -1,4 +1,4 @@
-# Install script for directory: C:/work/projects/grpc/third_party/zlib
+# Install script for directory: grpc/third_party/zlib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -174,8 +174,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "C:/Program Files (x86)/grpc/include" TYPE FILE FILES
-    "C:/work/projects/grpc/build_windows/third_party/zlib/zconf.h"
-    "C:/work/projects/grpc/third_party/zlib/zlib.h"
+    "${CMAKE_INSTALL_SOLUTION_DIR}third_party/zlib/zconf.h"
+    "${CMAKE_INSTALL_SOLUTION_DIR}../third_party/zlib/zlib.h"
     )
 endif()
 

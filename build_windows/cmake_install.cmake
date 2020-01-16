@@ -1,4 +1,4 @@
-# Install script for directory: C:/work/projects/grpc
+# Install script for directory: grpc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
