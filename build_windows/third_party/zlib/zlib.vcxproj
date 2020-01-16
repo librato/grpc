@@ -189,7 +189,7 @@
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(SolutionDir)$(Platform)\$(Configuration)\third_party\zzlibd.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)$(Platform)\$(Configuration)\third_party\zlibd.lib</ImportLibrary>
       <ProgramDataBaseFile>$(SolutionDir)$(Platform)\$(Configuration)\third_party\zlibd.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
