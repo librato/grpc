@@ -2680,12 +2680,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/benchmark/cmake_install.cmake")
-  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/cares/cares/cmake_install.cmake")
-  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/gflags/cmake_install.cmake")
-  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/protobuf/cmake_install.cmake")
-  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/boringssl/cmake_install.cmake")
-  include("${CMAKE_INSTALL_SOLUTION_DIR}../build_windows/third_party/zlib/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}third_party/benchmark/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}third_party/cares/cares/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}third_party/gflags/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}third_party/protobuf/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}third_party/boringssl/cmake_install.cmake")
+  include("${CMAKE_INSTALL_SOLUTION_DIR}third_party/zlib/cmake_install.cmake")
 
 endif()
 
