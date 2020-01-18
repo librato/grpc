@@ -39,7 +39,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{30BD0561-3481-37B4-A09C-6CB9262B9731}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>crypto_test</ProjectName>

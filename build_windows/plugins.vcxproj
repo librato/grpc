@@ -39,7 +39,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{966DFA2B-F0D9-3F5E-96BD-CF2F0DDAB4CB}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>plugins</ProjectName>

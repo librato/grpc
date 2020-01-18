@@ -1,105 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\pcy_cache.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\pcy_data.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\pcy_lib.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\pcy_map.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\pcy_node.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\pcy_tree.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_akey.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_akeya.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_alt.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_bcons.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_bitst.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_conf.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_cpols.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_crld.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_enum.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_extku.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_genn.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_ia5.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_info.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_int.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_lib.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_ncons.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_pci.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_pcia.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_pcons.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_pku.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_pmaps.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_prn.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_purp.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_skey.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_sxnet.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\v3_utl.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\pcy_cache.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\pcy_data.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\pcy_lib.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\pcy_map.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\pcy_node.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\pcy_tree.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_akey.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_akeya.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_alt.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_bcons.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_bitst.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_conf.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_cpols.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_crld.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_enum.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_extku.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_genn.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_ia5.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_info.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_int.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_lib.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_ncons.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_pci.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_pcia.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_pcons.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_pku.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_pmaps.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_prn.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_purp.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_skey.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_sxnet.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\v3_utl.c" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\work\projects\grpc\third_party\boringssl\crypto\x509v3\CMakeLists.txt" />
+    <CustomBuild Include="$(SolutionDir)\..\third_party\boringssl\crypto\x509v3\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">

@@ -1,17 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\work\projects\grpc\third_party\benchmark\test\user_counters_tabular_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\..\third_party\benchmark\test\user_counters_tabular_test.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\work\projects\grpc\third_party\benchmark\test\output_test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="$(SolutionDir)\..\third_party\benchmark\test\output_test.h" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\work\projects\grpc\third_party\benchmark\test\CMakeLists.txt" />
+    <CustomBuild Include="$(SolutionDir)\..\third_party\benchmark\test\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
