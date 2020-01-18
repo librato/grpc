@@ -1,32 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\ssl\test\async_bio.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\ssl\test\bssl_shim.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\ssl\test\packeted_bio.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\boringssl\ssl\test\test_config.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\test\async_bio.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\test\bssl_shim.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\test\packeted_bio.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\test\test_config.cc" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\work\projects\grpc\third_party\boringssl\ssl\test\CMakeLists.txt" />
+    <CustomBuild Include="$(SolutionDir)\..\third_party\boringssl\ssl\test\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\file_test.obj">
-      <Filter>Object Libraries</Filter>
-    </Object>
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\malloc.obj">
-      <Filter>Object Libraries</Filter>
-    </Object>
-    <Object Include="C:\work\projects\grpc\build_windows\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\test_util.obj">
-      <Filter>Object Libraries</Filter>
-    </Object>
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\file_test.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\malloc.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\test\test_support.dir\$(Platform)\$(Configuration)\test_util.obj" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Object Libraries">

@@ -1,47 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\work\projects\grpc\third_party\gflags\src\gflags.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\gflags\src\gflags_reporting.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\gflags\src\gflags_completions.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\work\projects\grpc\third_party\gflags\src\windows_port.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\..\third_party\gflags\src\gflags.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\gflags\src\gflags_reporting.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\gflags\src\gflags_completions.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\gflags\src\windows_port.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\work\projects\grpc\build_windows\third_party\gflags\include\gflags\defines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\work\projects\grpc\third_party\gflags\src\config.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\work\projects\grpc\third_party\gflags\src\util.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\work\projects\grpc\third_party\gflags\src\mutex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\work\projects\grpc\third_party\gflags\src\windows_port.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\work\projects\grpc\build_windows\third_party\gflags\include\gflags\gflags.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\work\projects\grpc\build_windows\third_party\gflags\include\gflags\gflags_declare.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\work\projects\grpc\build_windows\third_party\gflags\include\gflags\gflags_completions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="$(SolutionDir)\third_party\gflags\include\gflags\defines.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\gflags\src\config.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\gflags\src\util.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\gflags\src\mutex.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\gflags\src\windows_port.h" />
+    <ClInclude Include="$(SolutionDir)\third_party\gflags\include\gflags\gflags.h" />
+    <ClInclude Include="$(SolutionDir)\third_party\gflags\include\gflags\gflags_declare.h" />
+    <ClInclude Include="$(SolutionDir)\third_party\gflags\include\gflags\gflags_completions.h" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\work\projects\grpc\third_party\gflags\CMakeLists.txt" />
+    <CustomBuild Include="$(SolutionDir)\..\third_party\gflags\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
