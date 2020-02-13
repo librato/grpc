@@ -121,7 +121,7 @@ static bool epoll_set_init() {
 
 /* epoll_set_init() MUST be called before calling this. */
 static void epoll_set_shutdown() {
-  if (g_epoll_set.epfd >= 0) {
+  if (g_epoll_set.epfd > 0) {
     close(g_epoll_set.epfd);
     g_epoll_set.epfd = -1;
   }
