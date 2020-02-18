@@ -37,17 +37,20 @@
 #include "src/core/lib/uri/uri_parser.h"
 
 // Custom proxy set by oboe library
-const char* g_oboe_grpc_proxy = nullptr;
+static char* g_oboe_grpc_proxy = nullptr;
 
 // Set custom proxy by oboe
-void set_oboe_grpc_proxy(const char* proxy)
-{
-  g_oboe_grpc_proxy = proxy;
+void set_oboe_grpc_proxy(const char* proxy) {
+    if (g_oboe_grpc_proxy) {
+        gpr_free(g_oboe_grpc_proxy);
+    }
+    if (proxy) {
+        g_oboe_grpc_proxy = gpr_strdup(proxy);
+    }
 }
 
 // Get custom proxy by oboe
-char* get_oboe_grpc_proxy()
-{
+char* get_oboe_grpc_proxy() {
   return g_oboe_grpc_proxy ? gpr_strdup(g_oboe_grpc_proxy) : nullptr;
 }
 
