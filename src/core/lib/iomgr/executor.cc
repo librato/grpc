@@ -487,8 +487,11 @@ void Executor::SetThreadingDefault(bool enable) {
 
 }  // namespace grpc_core
 
+
+#if !defined(_WIN32)
 // patch to allow forking
 void *fork_g_this_thread_state = (void *)&grpc_core::g_this_thread_state;
 int fork_g_this_thread_state_size = sizeof(struct gpr_gcc_thread_local);
 void *fork_executors = (void *)&grpc_core::executors;
 int fork_executors_size = sizeof(grpc_core::Executor*) * static_cast<size_t>(grpc_core::ExecutorType::NUM_EXECUTORS);
+#endif

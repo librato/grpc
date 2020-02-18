@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E55BC394-56EB-3E95-882C-95BD19C6BC43}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>crypto</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">crypto</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">crypto</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">crypto</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">crypto</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(ProjectName).dir\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">crypto</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">crypto</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(ProjectName).dir\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">crypto</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">crypto</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(ProjectName).dir\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <IntDir>$(ProjectName).dir\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(ProjectName).dir\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <IntDir>$(ProjectName).dir\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\third_party\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045;4065;4506;4200;4291;4244;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>advapi32.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045;4065;4506;4200;4291;4244;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>advapi32.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045;4065;4506;4200;4291;4244;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>advapi32.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045;4065;4506;4200;4291;4244;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>advapi32.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045;4065;4506;4200;4291;4244;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>advapi32.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045;4065;4506;4200;4291;4244;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>advapi32.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045;4065;4506;4200;4291;4244;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>advapi32.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045;4065;4506;4200;4291;4244;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\third_party\boringssl\third_party\googletest\include;$(SolutionDir)\..\third_party\boringssl\crypto\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>advapi32.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(SolutionDir)\..\third_party\boringssl\crypto\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\third_party\boringssl\crypto\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\third_party\boringssl\crypto\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\third_party\boringssl\crypto\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\third_party\boringssl\crypto\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)\third_party\boringssl\crypto\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)\third_party\boringssl\crypto\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule $(SolutionDir)/../third_party/boringssl/crypto/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/work/projects/grpc -B$(SolutionDir)/../build_windows --check-stamp-file $(SolutionDir)/../build_windows/third_party/boringssl/crypto/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)\third_party\boringssl\crypto\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(SolutionDir)\third_party\boringssl\crypto\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\cpu-aarch64-fuchsia.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\cpu-aarch64-linux.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\cpu-arm.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\cpu-arm-linux.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\cpu-intel.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\cpu-ppc64le.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\crypto.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\ex_data.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\mem.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\refcount_c11.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\refcount_lock.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\thread.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\thread_none.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\thread_pthread.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.dir\$(Platform)\$(Configuration)\thread_win.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\stack\stack.dir\$(Platform)\$(Configuration)\stack.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\lhash\lhash.dir\$(Platform)\$(Configuration)\lhash.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\err\err.dir\$(Platform)\$(Configuration)\err.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\err\err.dir\$(Platform)\$(Configuration)\err_data.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\base64\base64.dir\$(Platform)\$(Configuration)\base64.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bytestring\bytestring.dir\$(Platform)\$(Configuration)\asn1_compat.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bytestring\bytestring.dir\$(Platform)\$(Configuration)\ber.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bytestring\bytestring.dir\$(Platform)\$(Configuration)\cbs.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bytestring\bytestring.dir\$(Platform)\$(Configuration)\cbb.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pool\pool.dir\$(Platform)\$(Configuration)\pool.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\fipsmodule\fipsmodule.dir\$(Platform)\$(Configuration)\bcm.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\fipsmodule\fipsmodule.dir\$(Platform)\$(Configuration)\is_fips.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\digest_extra\digest_extra.dir\$(Platform)\$(Configuration)\digest_extra.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\cipher_extra.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\derive_key.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\e_null.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\e_rc2.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\e_rc4.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\e_aesgcmsiv.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\e_aesctrhmac.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\e_aesccm.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\e_chacha20poly1305.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\tls_cbc.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\e_tls.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.dir\$(Platform)\$(Configuration)\e_ssl3.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\rc4\rc4.dir\$(Platform)\$(Configuration)\rc4.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\conf\conf.dir\$(Platform)\$(Configuration)\conf.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\chacha\chacha.dir\$(Platform)\$(Configuration)\chacha.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\poly1305\poly1305.dir\$(Platform)\$(Configuration)\poly1305.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\poly1305\poly1305.dir\$(Platform)\$(Configuration)\poly1305_arm.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\poly1305\poly1305.dir\$(Platform)\$(Configuration)\poly1305_vec.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\curve25519\curve25519.dir\$(Platform)\$(Configuration)\spake25519.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\third_party\fiat\fiat.dir\$(Platform)\$(Configuration)\curve25519.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\buf\buf.dir\$(Platform)\$(Configuration)\buf.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bn_extra\bn_extra.dir\$(Platform)\$(Configuration)\bn_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bn_extra\bn_extra.dir\$(Platform)\$(Configuration)\convert.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.dir\$(Platform)\$(Configuration)\bio.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.dir\$(Platform)\$(Configuration)\bio_mem.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.dir\$(Platform)\$(Configuration)\connect.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.dir\$(Platform)\$(Configuration)\fd.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.dir\$(Platform)\$(Configuration)\file.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.dir\$(Platform)\$(Configuration)\hexdump.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.dir\$(Platform)\$(Configuration)\pair.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.dir\$(Platform)\$(Configuration)\printf.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.dir\$(Platform)\$(Configuration)\socket.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.dir\$(Platform)\$(Configuration)\socket_helper.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\rand_extra\rand_extra.dir\$(Platform)\$(Configuration)\deterministic.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\rand_extra\rand_extra.dir\$(Platform)\$(Configuration)\forkunsafe.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\rand_extra\rand_extra.dir\$(Platform)\$(Configuration)\fuchsia.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\rand_extra\rand_extra.dir\$(Platform)\$(Configuration)\rand_extra.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\rand_extra\rand_extra.dir\$(Platform)\$(Configuration)\windows.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\obj\obj.dir\$(Platform)\$(Configuration)\obj.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\obj\obj.dir\$(Platform)\$(Configuration)\obj_xref.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_bitstr.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_bool.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_d2i_fp.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_dup.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_enum.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_gentm.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_i2d_fp.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_int.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_mbstr.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_object.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_octet.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_print.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_strnid.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_time.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_type.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_utctm.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\a_utf8.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\asn1_lib.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\asn1_par.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\asn_pack.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\f_enum.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\f_int.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\f_string.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\tasn_dec.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\tasn_enc.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\tasn_fre.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\tasn_new.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\tasn_typ.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\tasn_utl.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.dir\$(Platform)\$(Configuration)\time_support.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\engine\engine.dir\$(Platform)\$(Configuration)\engine.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\dh\dh.dir\$(Platform)\$(Configuration)\dh.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\dh\dh.dir\$(Platform)\$(Configuration)\params.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\dh\dh.dir\$(Platform)\$(Configuration)\check.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\dh\dh.dir\$(Platform)\$(Configuration)\dh_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\dsa\dsa.dir\$(Platform)\$(Configuration)\dsa.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\dsa\dsa.dir\$(Platform)\$(Configuration)\dsa_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\rsa_extra\rsa_extra.dir\$(Platform)\$(Configuration)\rsa_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\ec_extra\ec_extra.dir\$(Platform)\$(Configuration)\ec_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\ecdh\ecdh.dir\$(Platform)\$(Configuration)\ecdh.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\ecdsa_extra\ecdsa_extra.dir\$(Platform)\$(Configuration)\ecdsa_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\cmac\cmac.dir\$(Platform)\$(Configuration)\cmac.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\digestsign.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\evp.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\evp_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\evp_ctx.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\p_dsa_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\p_ec.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\p_ec_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\p_ed25519.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\p_ed25519_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\p_rsa.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\p_rsa_asn1.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\pbkdf.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\print.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\scrypt.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.dir\$(Platform)\$(Configuration)\sign.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\hkdf\hkdf.dir\$(Platform)\$(Configuration)\hkdf.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pem\pem.dir\$(Platform)\$(Configuration)\pem_all.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pem\pem.dir\$(Platform)\$(Configuration)\pem_info.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pem\pem.dir\$(Platform)\$(Configuration)\pem_lib.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pem\pem.dir\$(Platform)\$(Configuration)\pem_oth.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pem\pem.dir\$(Platform)\$(Configuration)\pem_pk8.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pem\pem.dir\$(Platform)\$(Configuration)\pem_pkey.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pem\pem.dir\$(Platform)\$(Configuration)\pem_x509.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pem\pem.dir\$(Platform)\$(Configuration)\pem_xaux.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\a_digest.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\a_sign.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\a_strex.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\a_verify.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\algorithm.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\asn1_gen.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\by_dir.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\by_file.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\i2d_pr.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\rsa_pss.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\t_crl.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\t_req.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\t_x509.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\t_x509a.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_att.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_cmp.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_d2.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_def.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_ext.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_lu.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_obj.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_r2x.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_req.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_set.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_trs.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_txt.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_v3.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_vfy.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509_vpm.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509cset.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509name.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509rset.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x509spki.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_algor.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_all.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_attrib.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_crl.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_exten.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_info.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_name.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_pkey.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_pubkey.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_req.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_sig.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_spki.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_val.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_x509.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.dir\$(Platform)\$(Configuration)\x_x509a.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\pcy_cache.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\pcy_data.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\pcy_lib.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\pcy_map.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\pcy_node.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\pcy_tree.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_akey.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_akeya.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_alt.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_bcons.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_bitst.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_conf.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_cpols.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_crld.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_enum.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_extku.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_genn.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_ia5.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_info.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_int.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_lib.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_ncons.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_pci.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_pcia.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_pcons.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_pku.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_pmaps.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_prn.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_purp.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_skey.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_sxnet.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.dir\$(Platform)\$(Configuration)\v3_utl.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pkcs7\pkcs7.dir\$(Platform)\$(Configuration)\pkcs7.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pkcs7\pkcs7.dir\$(Platform)\$(Configuration)\pkcs7_x509.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pkcs8\pkcs8_lib.dir\$(Platform)\$(Configuration)\pkcs8.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pkcs8\pkcs8_lib.dir\$(Platform)\$(Configuration)\pkcs8_x509.obj" />
+    <Object Include="$(SolutionDir)\third_party\boringssl\crypto\pkcs8\pkcs8_lib.dir\$(Platform)\$(Configuration)\p5_pbev2.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)\ZERO_CHECK.vcxproj">
+      <Project>{DB23DD04-F88C-3A76-B70E-2A167567223A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\asn1\asn1.vcxproj">
+      <Project>{2D65E5DF-79FB-361D-97A8-13F60F87D53A}</Project>
+      <Name>asn1</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\base64\base64.vcxproj">
+      <Project>{3DC8C885-DD4C-3BA8-AD83-6CF6C3B84EAE}</Project>
+      <Name>base64</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\bio\bio.vcxproj">
+      <Project>{522E4952-7F06-348C-8471-67DAC29238BB}</Project>
+      <Name>bio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\bn_extra\bn_extra.vcxproj">
+      <Project>{2C51BBE0-04D5-31B9-9E3E-7A6D43DE01D1}</Project>
+      <Name>bn_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\buf\buf.vcxproj">
+      <Project>{EA489099-A3C7-36EC-93B7-0BF17E8BB9AF}</Project>
+      <Name>buf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\bytestring\bytestring.vcxproj">
+      <Project>{E7F5CDDB-8FE6-3560-B2A3-542B6FEDE760}</Project>
+      <Name>bytestring</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\chacha\chacha.vcxproj">
+      <Project>{8F1F5B86-7536-3E06-B72E-67F15F3D2AEF}</Project>
+      <Name>chacha</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\cipher_extra\cipher_extra.vcxproj">
+      <Project>{786BF7D5-8D38-3226-81AE-60ED2E8112A2}</Project>
+      <Name>cipher_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\cmac\cmac.vcxproj">
+      <Project>{84470C9B-262E-3C8B-9F2F-DF410D5B3E89}</Project>
+      <Name>cmac</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\conf\conf.vcxproj">
+      <Project>{0E876D5A-704A-308E-BC55-36919E997763}</Project>
+      <Name>conf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\crypto_base.vcxproj">
+      <Project>{8D700B02-CC1A-3975-AEBF-012C0AB38DAA}</Project>
+      <Name>crypto_base</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\curve25519\curve25519.vcxproj">
+      <Project>{B9068EE7-55E5-3AAD-8819-2953076E6AED}</Project>
+      <Name>curve25519</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\dh\dh.vcxproj">
+      <Project>{24D1E069-70B3-3369-B378-1A4F5117CC6B}</Project>
+      <Name>dh</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\digest_extra\digest_extra.vcxproj">
+      <Project>{C73FE13E-2AAF-31C9-B73B-EC22F5D9AC87}</Project>
+      <Name>digest_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\dsa\dsa.vcxproj">
+      <Project>{AB058B77-C6AB-30F5-9CDE-058A68349055}</Project>
+      <Name>dsa</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\ec_extra\ec_extra.vcxproj">
+      <Project>{79AFDC8D-4CD9-35F5-B3F0-AAA4E9D5B7FB}</Project>
+      <Name>ec_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\ecdh\ecdh.vcxproj">
+      <Project>{EA6CC1E7-3204-39D6-8F57-9090E218D382}</Project>
+      <Name>ecdh</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\ecdsa_extra\ecdsa_extra.vcxproj">
+      <Project>{48E920DF-EA27-3CC0-A5A7-ED14CF180C05}</Project>
+      <Name>ecdsa_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\engine\engine.vcxproj">
+      <Project>{8839C970-4D73-35EB-A7C0-F8BF53DFAD4C}</Project>
+      <Name>engine</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\err\err.vcxproj">
+      <Project>{B0FFE9A4-3747-323F-82AC-3ED95842658F}</Project>
+      <Name>err</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\evp\evp.vcxproj">
+      <Project>{F5E343BF-FEB4-34F7-9578-1F3CC9AA2416}</Project>
+      <Name>evp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\third_party\fiat\fiat.vcxproj">
+      <Project>{65F1FF1B-3895-3B84-AF5B-27F6B0110571}</Project>
+      <Name>fiat</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\fipsmodule\fipsmodule.vcxproj">
+      <Project>{3AA29996-3599-3CCA-9A16-24E2F87B6811}</Project>
+      <Name>fipsmodule</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\hkdf\hkdf.vcxproj">
+      <Project>{F2E0CAE3-221D-354D-8AEC-9E8F26A484EF}</Project>
+      <Name>hkdf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\lhash\lhash.vcxproj">
+      <Project>{542CB5DE-384F-3C42-AFA4-DB0BF13FFB9B}</Project>
+      <Name>lhash</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\obj\obj.vcxproj">
+      <Project>{23D6093D-F0D6-31CB-9924-C7A33A07C31E}</Project>
+      <Name>obj</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\pem\pem.vcxproj">
+      <Project>{B4705396-A9EF-3939-8ECF-4DC465658BDC}</Project>
+      <Name>pem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\pkcs7\pkcs7.vcxproj">
+      <Project>{814AE31C-ED0E-3638-B0EA-358FEA3CEFD2}</Project>
+      <Name>pkcs7</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\pkcs8\pkcs8_lib.vcxproj">
+      <Project>{392565FF-E4AD-3ED9-B3A8-E48BC4F56B60}</Project>
+      <Name>pkcs8_lib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\poly1305\poly1305.vcxproj">
+      <Project>{CACE5659-256E-3272-8DA4-EFCA53721756}</Project>
+      <Name>poly1305</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\pool\pool.vcxproj">
+      <Project>{3EE5DB97-8B16-3F3B-AD2D-1870369DB37E}</Project>
+      <Name>pool</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\rand_extra\rand_extra.vcxproj">
+      <Project>{5DA421B9-B46C-3CE2-B519-36A37E202362}</Project>
+      <Name>rand_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\rc4\rc4.vcxproj">
+      <Project>{30845B5A-BBF0-322A-A21F-BC5EA647BB7C}</Project>
+      <Name>rc4</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\rsa_extra\rsa_extra.vcxproj">
+      <Project>{E88B5465-C046-3898-89EE-D265451057E9}</Project>
+      <Name>rsa_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\stack\stack.vcxproj">
+      <Project>{8814184B-9AB6-3854-863E-470BFB579102}</Project>
+      <Name>stack</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\x509\x509.vcxproj">
+      <Project>{9E302DD4-D518-359B-93E4-3A90F0EC7C67}</Project>
+      <Name>x509</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\third_party\boringssl\crypto\x509v3\x509v3.vcxproj">
+      <Project>{9AA1A774-F9A6-306E-88BC-ABFB92D7B698}</Project>
+      <Name>x509v3</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,118 @@
+{
+  "context": {
+    "date": "01/16/20 14:17:49",
+    "host_name": "WIN-10-DEV",
+    "executable": "display_aggregates_only_test.exe",
+    "num_cpus": 4,
+    "mhz_per_cpu": 2494,
+    "cpu_scaling_enabled": false,
+    "caches": [
+      {
+        "type": "Data",
+        "level": 1,
+        "size": 32768000,
+        "num_sharing": 4
+      },
+      {
+        "type": "Instruction",
+        "level": 1,
+        "size": 32768000,
+        "num_sharing": 4
+      },
+      {
+        "type": "Unified",
+        "level": 2,
+        "size": 262144000,
+        "num_sharing": 4
+      },
+      {
+        "type": "Unified",
+        "level": 3,
+        "size": 6291456000,
+        "num_sharing": 4
+      },
+      {
+        "type": "Unified",
+        "level": 4,
+        "size": 134217728000,
+        "num_sharing": 4
+      }
+    ],
+    "load_avg": [],
+    "library_build_type": "debug"
+  },
+  "benchmarks": [
+    {
+      "name": "BM_SummaryRepeat/repeats:3",
+      "run_name": "BM_SummaryRepeat/repeats:3",
+      "run_type": "iteration",
+      "repetitions": 3,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 56000000,
+      "real_time": 1.0943342857119983e+01,
+      "cpu_time": 1.0881696428571429e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_SummaryRepeat/repeats:3",
+      "run_name": "BM_SummaryRepeat/repeats:3",
+      "run_type": "iteration",
+      "repetitions": 3,
+      "repetition_index": 1,
+      "threads": 1,
+      "iterations": 56000000,
+      "real_time": 1.1176125000019965e+01,
+      "cpu_time": 1.1160714285714286e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_SummaryRepeat/repeats:3",
+      "run_name": "BM_SummaryRepeat/repeats:3",
+      "run_type": "iteration",
+      "repetitions": 3,
+      "repetition_index": 2,
+      "threads": 1,
+      "iterations": 56000000,
+      "real_time": 1.1376319642944768e+01,
+      "cpu_time": 1.1439732142857142e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_SummaryRepeat/repeats:3_mean",
+      "run_name": "BM_SummaryRepeat/repeats:3",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "mean",
+      "iterations": 3,
+      "real_time": 1.1165262500028240e+01,
+      "cpu_time": 1.1160714285714285e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_SummaryRepeat/repeats:3_median",
+      "run_name": "BM_SummaryRepeat/repeats:3",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "median",
+      "iterations": 3,
+      "real_time": 1.1176125000019965e+01,
+      "cpu_time": 1.1160714285714285e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_SummaryRepeat/repeats:3_stddev",
+      "run_name": "BM_SummaryRepeat/repeats:3",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "stddev",
+      "iterations": 3,
+      "real_time": 2.1669268491432139e-01,
+      "cpu_time": 2.7901785714282540e-01,
+      "time_unit": "ns"
+    }
+  ]
+}

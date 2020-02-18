@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\bio.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\bio_mem.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\connect.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\fd.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\file.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\hexdump.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\pair.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\printf.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\socket.c" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\socket_helper.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(SolutionDir)\..\third_party\boringssl\crypto\bio\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CD21E010-41C5-3974-96F9-0A777EDB1A56}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
