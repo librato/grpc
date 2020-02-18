@@ -1,0 +1,59 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CMakeConfigurableFile.in
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckCSourceCompiles.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckFunctionExists.c
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckFunctionExists.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckIncludeFile.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckIncludeFiles.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckLibraryExists.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckStructHasMember.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckSymbolExists.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CheckTypeSize.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/GNUInstallDirs.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/WriteBasicConfigVersionFile.cmake
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_ARPA_INET_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_ARPA_NAMESER_COMPAT_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_ARPA_NAMESER_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_ASSERT_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_DLFCN_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_ERRNO_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_FCNTL_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_INTTYPES_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_LIMITS_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_MALLOC_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_MEMORY_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_NETDB_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_NETINET_IN_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_NETINET_TCP_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_NET_IF_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_SIGNAL_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_SOCKET_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_STDBOOL_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_STDINT_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_STDLIB_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_STRINGS_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_STRING_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_STROPTS_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_SYS_IOCTL_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_SYS_PARAM_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SELECT_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SOCKET_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_SYS_STAT_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_SYS_TIME_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_SYS_TYPES_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_SYS_UIO_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_TIME_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_UNISTD_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_WINSOCK2_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_WINSOCK_H.c
+C:/work/projects/grpc/build_windows/CMakeFiles/CheckIncludeFiles/HAVE_WS2TCPIP_H.c
+C:/work/projects/grpc/build_windows/third_party/cares/cares/Makefile.inc.cmake
+C:/work/projects/grpc/third_party/cares/cares/CMakeLists.txt
+C:/work/projects/grpc/third_party/cares/cares/ares_build.h.cmake
+C:/work/projects/grpc/third_party/cares/cares/ares_config.h.cmake
+C:/work/projects/grpc/third_party/cares/cares/c-ares-config.cmake.in
+C:/work/projects/grpc/third_party/cares/cares/libcares.pc.cmake

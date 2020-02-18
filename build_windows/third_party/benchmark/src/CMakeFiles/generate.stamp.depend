@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/GNUInstallDirs.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.15/Modules/WriteBasicConfigVersionFile.cmake
+C:/work/projects/grpc/third_party/benchmark/cmake/Config.cmake.in
+C:/work/projects/grpc/third_party/benchmark/cmake/benchmark.pc.in
+C:/work/projects/grpc/third_party/benchmark/src/CMakeLists.txt

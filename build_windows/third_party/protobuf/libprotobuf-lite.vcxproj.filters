@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\any_lite.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\arena.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\extension_set.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\generated_message_table_driven_lite.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\generated_message_util.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\implicit_weak_message.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\io\coded_stream.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\io\io_win32.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\io\strtod.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\io\zero_copy_stream.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\io\zero_copy_stream_impl_lite.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\message_lite.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\parse_context.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\repeated_field.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\bytestream.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\common.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\int128.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\status.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\statusor.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\stringpiece.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\stringprintf.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\structurally_valid.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\strutil.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\time.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\wire_format_lite.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\arena.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\arenastring.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\extension_set.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\generated_message_util.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\implicit_weak_message.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\parse_context.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\io\coded_stream.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\io\strtod.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\io\zero_copy_stream.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\io\zero_copy_stream_impl_lite.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\message_lite.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\repeated_field.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\bytestream.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\common.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\int128.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\once.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\status.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\statusor.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\stringpiece.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\stringprintf.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\strutil.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\stubs\time.h" />
+    <ClInclude Include="$(SolutionDir)\..\third_party\protobuf\src\google\protobuf\wire_format_lite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(SolutionDir)\..\third_party\protobuf\cmake\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(SolutionDir)\third_party\protobuf\version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{436D9619-0EE0-324E-86BF-FC82F3C2354B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CD21E010-41C5-3974-96F9-0A777EDB1A56}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

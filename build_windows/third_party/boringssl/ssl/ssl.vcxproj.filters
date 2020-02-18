@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\bio_ssl.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\custom_extensions.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\d1_both.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\d1_lib.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\d1_pkt.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\d1_srtp.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\dtls_method.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\dtls_record.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\handoff.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\handshake.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\handshake_client.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\handshake_server.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\s3_both.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\s3_lib.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\s3_pkt.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_aead_ctx.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_asn1.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_buffer.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_cert.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_cipher.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_file.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_key_share.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_lib.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_privkey.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_session.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_stat.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_transcript.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_versions.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\ssl_x509.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\t1_enc.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\t1_lib.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\tls_method.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\tls_record.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\tls13_both.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\tls13_client.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\tls13_enc.cc" />
+    <ClCompile Include="$(SolutionDir)\..\third_party\boringssl\ssl\tls13_server.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(SolutionDir)\..\third_party\boringssl\ssl\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CD21E010-41C5-3974-96F9-0A777EDB1A56}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

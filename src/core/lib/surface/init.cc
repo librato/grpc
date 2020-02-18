@@ -248,6 +248,7 @@ void grpc_maybe_wait_for_async_shutdown(void) {
   }
 }
 
+#if !defined(_WIN32)
 /************************************************
  * Workaround to support forking
  ***********************************************/
@@ -417,3 +418,4 @@ void grpc_clean_after_fork(void) {
 }
 
 //*************************************************
+#endif

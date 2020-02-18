@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)\gens\src\proto\grpc\status\status.pb.cc" />
+    <ClCompile Include="$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.cc" />
+    <ClCompile Include="$(SolutionDir)\..\src\cpp\util\error_details.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)\gens\src\proto\grpc\status\status.pb.h" />
+    <ClInclude Include="$(SolutionDir)\gens\src\proto\grpc\status\status.grpc.pb.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(SolutionDir)\CMakeFiles\ca5d3753f7b5fd97197b651e72e687ef\status.grpc.pb.cc.rule" />
+    <CustomBuild Include="$(SolutionDir)\..\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2BDD9CF2-5E47-3C9A-8974-C2D2FF58E4CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{436D9619-0EE0-324E-86BF-FC82F3C2354B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CD21E010-41C5-3974-96F9-0A777EDB1A56}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
