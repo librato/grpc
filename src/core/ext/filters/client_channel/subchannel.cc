@@ -1031,7 +1031,7 @@ void Subchannel::OnConnectingFinished(void* arg, grpc_error* error) {
     } else if (c->disconnected_) {
       GRPC_SUBCHANNEL_WEAK_UNREF(c, "connecting");
     } else {
-      gpr_log(GPR_INFO, "Connect failed: %s", grpc_error_string(error));
+      gpr_log(GPR_ERROR, "Connect failed: %s", grpc_error_string(error));
       c->SetConnectivityStateLocked(GRPC_CHANNEL_TRANSIENT_FAILURE);
       GRPC_SUBCHANNEL_WEAK_UNREF(c, "connecting");
     }
