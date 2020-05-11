@@ -256,7 +256,7 @@ void grpc_maybe_wait_for_async_shutdown(void) {
 #include <vector>
 #include <unistd.h>
 
-static gpr_mu *grpc_mutex_socket_fd, *grpc_mutex_once, *grpc_mutex_mutex, *grpc_mutex_cond;
+static gpr_mu *grpc_mutex_socket_fd = NULL, *grpc_mutex_once = NULL, *grpc_mutex_mutex = NULL, *grpc_mutex_cond = NULL;
 static std::vector<int> grpc_socket_fd;
 static std::vector<pthread_once_t *> grpc_once;
 static std::set<pthread_mutex_t *> grpc_mutex;
@@ -276,8 +276,10 @@ static void my_mu_init(gpr_mu* mu) {
  * called from tcp_client_posix.cc when a socket is created
  */
 void grpc_add_socket_fd(int fd) {
-    grpc_core::MutexLock lock(grpc_mutex_socket_fd);
-    grpc_socket_fd.push_back(fd);
+    if (grpc_mutex_socket_fd) {
+        grpc_core::MutexLock lock(grpc_mutex_socket_fd);
+        grpc_socket_fd.push_back(fd);
+    }
 }
 
 /*
@@ -294,8 +296,10 @@ static void grpc_close_sockets() {
  * called from sync_posix.cc for every pthread_once()
  */
 void grpc_add_once_init(pthread_once_t *once) {
-    grpc_core::MutexLock lock(grpc_mutex_once);
-    grpc_once.push_back(once);
+    if (grpc_mutex_once) {
+        grpc_core::MutexLock lock(grpc_mutex_once);
+        grpc_once.push_back(once);
+    }
 }
 
 /*
@@ -312,16 +316,20 @@ static void grpc_reset_once_inits() {
  * called from sync_posix.cc for every pthread_mutex_init()
  */
 void grpc_add_mutex(pthread_mutex_t *mutex) {
-    grpc_core::MutexLock lock(grpc_mutex_mutex);
-    grpc_mutex.insert(mutex);
+    if (grpc_mutex_mutex) {
+        grpc_core::MutexLock lock(grpc_mutex_mutex);
+        grpc_mutex.insert(mutex);
+    }
 }
 
 /*
  * called from sync_posix.cc for every pthread_mutex_destroy()
  */
 void grpc_remove_mutex(pthread_mutex_t *mutex) {
-    grpc_core::MutexLock lock(grpc_mutex_mutex);
-    grpc_mutex.erase(mutex);
+    if (grpc_mutex_mutex) {
+        grpc_core::MutexLock lock(grpc_mutex_mutex);
+        grpc_mutex.erase(mutex);
+    }
 }
 
 /*
@@ -338,16 +346,20 @@ static void grpc_reset_mutexes() {
  * called from sync_posix.cc for every pthread_cond_init()
  */
 void grpc_add_cond(pthread_cond_t *cond) {
-    grpc_core::MutexLock lock(grpc_mutex_cond);
-    grpc_cond.insert(cond);
+    if (grpc_mutex_cond) {
+        grpc_core::MutexLock lock(grpc_mutex_cond);
+        grpc_cond.insert(cond);
+    }
 }
 
 /*
  * called from sync_posix.cc for every pthread_cond_destroy()
  */
 void grpc_remove_cond(pthread_cond_t *cond) {
-    grpc_core::MutexLock lock(grpc_mutex_cond);
-    grpc_cond.erase(cond);
+    if (grpc_mutex_cond) {
+        grpc_core::MutexLock lock(grpc_mutex_cond);
+        grpc_cond.erase(cond);
+    }
 }
 
 /*
