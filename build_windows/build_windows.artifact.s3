@@ -1,0 +1,3 @@
+package=grpc_build_windows.zip
+url=https://apm-build.s3.amazonaws.com
+version=15ac582
